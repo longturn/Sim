@@ -817,6 +817,7 @@ actor_reqs={"type","name","range","present"
 
 [combat_rules]
 tired_attack=TRUE
+only_killing_makes_veteran = TRUE
 
 [borders]
 radius_sq_city=0
