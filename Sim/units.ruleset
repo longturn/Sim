@@ -977,6 +977,34 @@ flags="IgTer","IgWall","Capturer"
 roles="DefendOk"
 helptext="Commandos are highly mobile units as well as excellent defenders."
 
+[unit_homeguard]
+name=_("Homeguard")
+class="Land"
+tech_req="Democracy"
+graphic="u.partisan"
+graphic_alt="u.riflemen"
+sound_move="m_riflemen"
+sound_move_alt="m_generic"
+sound_fight="f_partisan"
+sound_fight_alt="f_generic"
+build_cost=10
+pop_cost=0
+attack=2
+defense=4
+move_rate=2
+vision_radius_sq=6
+transport_cap=0
+embarks="Helicopter"
+disembarks="Helicopter"
+vision_layer="Stealth"
+hitpoints=10
+firepower=1
+fuel=0
+uk_happy=0
+uk_gold=1
+flags="Capturer","Marines"
+helptext="Homeguard, or territorial guard, or state guard, are home defense low-cost units whose role is to provide token defense for large parts of territory or slow rapid advance of the enemy. If well fortified on favourable terrain, they may put up a fight, but willl not be too efficient against a professional elite attack force."
+
 [unit_19]
 name=_("Partisan")
 class="Land"
