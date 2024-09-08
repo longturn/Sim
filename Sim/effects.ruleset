@@ -3699,12 +3699,12 @@ reqs={"type","name","range"
 "MinSize","20","City"
 }
 
-[effect_447]
+[effect_size11]
 type="Defend_Bonus"
 value=10
 reqs={"type","name","range","present"
 "CityTile","Center","Local",TRUE
-"MinSize","1","City",TRUE
+"MinSize","11","City",TRUE
 "UnitClass","Sea","Local",FALSE
 "UnitClass","Trireme","Local",FALSE
 "UnitClass","Helicopter","Local",FALSE
@@ -3713,12 +3713,12 @@ reqs={"type","name","range","present"
 "UnitFlag","IgWall","Local",FALSE
 }
 
-[effect_448]
+[effect_size12]
 type="Defend_Bonus"
 value=10
 reqs={"type","name","range","present"
 "CityTile","Center","Local",TRUE
-"MinSize","2","City",TRUE
+"MinSize","12","City",TRUE
 "UnitClass","Sea","Local",FALSE
 "UnitClass","Trireme","Local",FALSE
 "UnitClass","Helicopter","Local",FALSE
