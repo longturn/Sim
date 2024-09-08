@@ -6,7 +6,7 @@ rulesetdir Sim06
 # ruleset test settings ------------------------------
 # set fogofwar "DISABLED"
 # set unitwaittime 0
-# set timeout 60
+# set timeout 120
 # set revealmap "START"
 # cmdlevel hack
 # ----------------------------------------------------
@@ -14,7 +14,7 @@ rulesetdir Sim06
 # server test game settings --------------------------
 set fogofwar "DISABLED"
 set timeout 120 # 2 mins
-set unitwaittime 10  # 10 sec
+# set unitwaittime 10  # 10 sec
 set revealmap "START"
 cmdlevel info
 # ----------------------------------------------------
@@ -46,7 +46,7 @@ set mapsize "PLAYER"
 set tilesperplayer 80 # <-----------------------------------------------------
 
 # general rules
-set aifill 20 # see players.serv   <------------------------------------------
+# set aifill 28 # see players.serv   <------------------------------------------
 set nationset all
 set borders enabled
 set citymindist 1
@@ -68,7 +68,7 @@ set endturn 5000
 set unitwaittime_style ACTIVITIES
 
 # diplomacy, technology
-# set diplchance 50
+set diplchance 50
 set diplomacy HUMAN
 set sciencebox 40
 set techlost_donor 0
@@ -85,7 +85,7 @@ set techlossforgiveness -1
 set techlossrestore 50
 
 # technical
-###set allowtake Hh  <------------------------------------------
+set allowtake Hh
 set compresstype LIBZ
 set ec_chat enabled
 set ec_info enabled 
@@ -94,7 +94,7 @@ set ec_turns 5
 ###set maxplayers 126  <---------------------------
 set saveturns 1
 set scorelog enabled
-#set fixedlength enabled  #  <------------------------------
+set fixedlength enabled  #  <------------------------------
 metamessage "Longturn Sim Game"
 metapatches longturn
 set autotoggle disabled
@@ -111,6 +111,5 @@ set multiresearch ENABLED
 
 # Players
 set nationset all
-hard
-read players.serv
+read players.serv  # for the real game, put "hard" at the end of players.serv
 
