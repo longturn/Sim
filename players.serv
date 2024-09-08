@@ -1,3 +1,5 @@
+######### TEST GAME
+
 set aifill 32
 aitoggle AI*1
 aitoggle AI*2
