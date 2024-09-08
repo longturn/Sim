@@ -144,7 +144,7 @@ graphic="a.automobile"
 [advance_6]
 name=_("Banking")
 req1="Trade"
-req2="The Republic"
+req2="Taxation"
 graphic="a.banking"
 
 [advance_7]
@@ -273,7 +273,7 @@ graphic="a.explosives"
 
 [advance_27]
 name=_("Feudalism")
-req1="Monarchy"
+req1="Monotheism"
 req2="None"
 graphic="a.feudalism"
 
@@ -413,11 +413,11 @@ req1="Automobile"
 req2="Machine Tools"
 graphic="a.mobile_warfare"
 
-[advance_50]
-name=_("Monarchy")
-req1="Polytheism"
-req2="Code of Laws"
-graphic="a.monarchy"
+#[advance_50]
+#name=_("Monarchy")
+#req1="Polytheism"
+#req2="Code of Laws"
+#graphic="a.monarchy"
 
 [advance_51]
 name=_("Monotheism")
@@ -589,11 +589,11 @@ req2="Industrialization"
 graphic="a.the_corporation"
 helptext="Halves the corruption of trade related to distance from the capital (or eliminates it for Federation governments)."
 
-[advance_78]
-name=_("The Republic")
-req1="Code of Laws"
-req2="Philosophy"
-graphic="a.the_republic"
+#[advance_78]
+#name=_("The Republic")
+#req1="Code of Laws"
+#req2="Philosophy"
+#graphic="a.the_republic"
 
 [advance_79]
 name=_("The Wheel")
@@ -736,5 +736,6 @@ graphic="-"
 
 [advance_taxation]
 name = _("Taxation")
-req1 = "Monarchy"
+req1 = "Code of Laws"
 req2 = "None"
+helptext="Taxation, gentlemen, is all about extracting the maximum of milk with the minimum of moo. And I'm afraid to say that these days all I get is moo."
