@@ -1,22 +1,22 @@
 # [effect_free_techs] needs to be updated from effects.ruleset to correspond the number of the players in a game
 # the value defines how many players need to invent a tech before it's given free to everyone. currently set to 18
 
-rulesetdir Sim
+rulesetdir Sim06
 
 # ruleset test settings ------------------------------
-set fogofwar "DISABLED"
-set unitwaittime 0
-set timeout 60
-set revealmap "START"
-cmdlevel hack
+# set fogofwar "DISABLED"
+# set unitwaittime 0
+# set timeout 60
+# set revealmap "START"
+# cmdlevel hack
 # ----------------------------------------------------
 
 # server test game settings --------------------------
-# set fogofwar "DISABLED"
-# set timeout 120 # 2 mins
-# set unitwaittime 10  # 10 sec
-# set revealmap "START"
-# cmdlevel info
+set fogofwar "DISABLED"
+set timeout 120 # 2 mins
+set unitwaittime 10  # 10 sec
+set revealmap "START"
+cmdlevel info
 # ----------------------------------------------------
 
 # real game settings --------------------------------
