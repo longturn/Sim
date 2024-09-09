@@ -12,10 +12,10 @@ rulesetdir Sim06
 # ----------------------------------------------------
 
 # server test game settings --------------------------
-set fogofwar "DISABLED"
 set timeout 120 # 2 mins
 # set unitwaittime 10  # 10 sec
 set revealmap "START"
+set startcity ENABLED
 cmdlevel info
 # ----------------------------------------------------
 
@@ -85,7 +85,7 @@ set techlossforgiveness -1
 set techlossrestore 50
 
 # technical
-set allowtake Hh
+set allowtake ""
 set compresstype LIBZ
 set ec_chat enabled
 set ec_info enabled 
@@ -111,6 +111,7 @@ set multiresearch ENABLED
 
 # Players
 set nationset all
-# for the real game, put "hard" at the end of players.serv
 read players.serv
+hard
+start
 
