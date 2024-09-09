@@ -1,6 +1,7 @@
 ######### TEST GAME
 
-set aifill 32
+set aifill 7  # <------- test game
+#set aifill 32
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
