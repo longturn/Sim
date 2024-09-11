@@ -12,7 +12,7 @@
 [datafile]
 description="Sim ruleset effect data for Freeciv21"
 ruledit="3.0.601765.2-rc"
-options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Wonder_Visible Vision_Layer Nation_Intelligence"
+options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Bombard_Limit_Pct Wonder_Visible Vision_Layer Nation_Intelligence"
 format_version=20
 ; /* <-- avoid gettext warnings
 ;
