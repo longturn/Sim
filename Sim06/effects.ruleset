@@ -12,7 +12,7 @@
 [datafile]
 description="Sim ruleset effect data for Freeciv21"
 ruledit="3.0.601765.2-rc"
-options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Bombard_Limit_Pct Wonder_Visible Vision_Layer Nation_Intelligence"
+options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Wonder_Visible Vision_Layer Nation_Intelligence"
 format_version=20
 ; /* <-- avoid gettext warnings
 ;
@@ -3699,7 +3699,7 @@ reqs={"type","name","range"
 "MinSize","20","City"
 }
 
-[effect_size11]
+[effect_size13]
 type="Defend_Bonus"
 value=10
 reqs={"type","name","range","present"
@@ -5034,5 +5034,44 @@ value  =  10
 reqs   =
     { "type", "name", "range"
     "UnitType", "ICBM", "Local"
+    }
+
+[effect_Bombard_Limit_Percent_default]
+type  = "Bombard_Limit_Pct"
+value =1
+
+[effect_Bombard_Limit_Percent_mountains]
+type  = "Bombard_Limit_Pct"
+value = 19
+reqs   =
+    { "type", "name", "range"
+    "Terrain", "Mountains", "Local"
+    "CityTile","Center","Local", FALSE
+    }
+
+[effect_Bombard_Limit_Percent_forest]
+type  = "Bombard_Limit_Pct"
+value = 29
+reqs   =
+    { "type", "name", "range"
+    "Terrain", "Forest", "Local"
+    "CityTile","Center","Local", FALSE
+    }
+
+[effect_Bombard_Limit_Percent_jungle]
+type  = "Bombard_Limit_Pct"
+value = 39
+reqs   =
+    { "type", "name", "range"
+    "Terrain", "Jungle", "Local"
+    "CityTile","Center","Local", FALSE
+    }
+
+[effect_Bombard_Limit_Percent_city]
+type  = "Bombard_Limit_Pct"
+value = 32
+reqs   =
+    { "type", "name", "range"
+    "CityTile","Center","Local"
     }
 
