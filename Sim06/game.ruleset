@@ -517,6 +517,17 @@ target_reqs={"type","name","range","present"
 "CityTile","Claimed","Local",FALSE
 }
 
+[actionenabler_icbm_launch]
+action="Paradrop Unit"
+actor_reqs={"type","name","range","present"
+"UnitType","ICBM","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+}
+target_reqs={"type","name","range","present"
+"CityTile","Claimed","Local",FALSE
+}
+
+
 [actionenabler_38]
 action="Airlift Unit"
 actor_reqs={"type","name","range","present"
