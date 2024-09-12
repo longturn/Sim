@@ -4996,56 +4996,18 @@ reqs   =
     "UnitType", "Carrier", "Local"
     }
 
-[effect_combat_rounds_Cruise Missile]
-type   = "Combat_Rounds"
-value  =  10
-reqs   =
-    { "type", "name", "range"
-    "UnitType", "Cruise Missile", "Local"
-    }
-
-[effect_combat_rounds_Little Boy]
-type   = "Combat_Rounds"
-value  =  10
-reqs   =
-    { "type", "name", "range"
-    "UnitType", "Little Boy", "Local"
-    }
-
-[effect_combat_rounds_Fat Man]
-type   = "Combat_Rounds"
-value  =  10
-reqs   =
-    { "type", "name", "range"
-    "UnitType", "Fat Man", "Local"
-    }
-
-[effect_combat_rounds_Atom Bomb]
-type   = "Combat_Rounds"
-value  =  10
-reqs   =
-    { "type", "name", "range"
-    "UnitType", "Atom Bomb", "Local"
-    }
-
-[effect_combat_rounds_ICBM]
-type   = "Combat_Rounds"
-value  =  10
-reqs   =
-    { "type", "name", "range"
-    "UnitType", "ICBM", "Local"
-    }
 
 [effect_Bombard_Limit_Percent_default]
 type  = "Bombard_Limit_Pct"
 value =1
 
+
 [effect_Bombard_Limit_Percent_mountains]
 type  = "Bombard_Limit_Pct"
 value = 19
 reqs   =
-    { "type", "name", "range"
-    "Terrain", "Mountains", "Local"
+    { "type", "name", "range", "present"
+    "Terrain", "Mountains", "Local", TRUE
     "CityTile","Center","Local", FALSE
     }
 
@@ -5053,8 +5015,8 @@ reqs   =
 type  = "Bombard_Limit_Pct"
 value = 29
 reqs   =
-    { "type", "name", "range"
-    "Terrain", "Forest", "Local"
+    { "type", "name", "range", "present"
+    "Terrain", "Forest", "Local", TRUE
     "CityTile","Center","Local", FALSE
     }
 
@@ -5062,8 +5024,8 @@ reqs   =
 type  = "Bombard_Limit_Pct"
 value = 39
 reqs   =
-    { "type", "name", "range"
-    "Terrain", "Jungle", "Local"
+    { "type", "name", "range", "present"
+    "Terrain", "Jungle", "Local", TRUE
     "CityTile","Center","Local", FALSE
     }
 
