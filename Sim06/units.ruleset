@@ -2147,6 +2147,7 @@ disembarks="Air"
 hitpoints=10
 firepower=1
 fuel=1
+vision_layer="Stealth"
 uk_happy=1
 uk_shield=1
 uk_gold=5
@@ -2157,7 +2158,7 @@ veteran_work_raise_chance=0
 veteran_move_bonus=0
 paratroopers_range=999
 flags="OneAttack","FieldUnit","NoHome","AirAttacker","Paratroopers","Nuclear"
-helptext="Fat Man is a unique unit which means you can only have one at a time. You can build it when:* Manhattan Projects exists* you have built Trinity Project\\On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain  across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water). Transports can clean up nuclear fallout."
+helptext="This is the ultimate weapon. The only problem is, if you use it, you better make sure the enemy doesn't have it, too. You can try and destroy all of them, bu good luck with that. ICBMs are invisible and can be launched from any location.", " On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain  across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water). Transports can clean up nuclear fallout."
 
 [unit_59]
 name=_("Nuclear")
