@@ -315,6 +315,18 @@ target_reqs={"type","name","range","present"
 "MaxUnitsOnTile","1","Local",TRUE
 }
 
+[actionenabler_gift_unit]
+action="Bribe Unit"
+actor_reqs={"type","name","range"
+"UnitType","Military Liaison","Local"
+"DiplRel","Alliance","Local"
+"MinMoveFrags","1","Local"
+"DiplRel","Foreign","Local"
+}
+target_reqs={"type","name","range"
+"MaxUnitsOnTile","1","Local"
+}
+
 [actionenabler_19]
 action="Sabotage Unit Escape"
 actor_reqs={"type","name","range"
