@@ -12,20 +12,20 @@ rulesetdir Sim06
 # ----------------------------------------------------
 
 # server test game settings --------------------------
-set timeout 120 # 2 mins
+# set timeout 120 # 2 mins
 # set unitwaittime 10  # 10 sec
-set revealmap "START"
-set startcity ENABLED
-cmdlevel info
+# set revealmap "START"
+# set startcity ENABLED
+# cmdlevel info
 # ----------------------------------------------------
 
 # real game settings --------------------------------
-# set savegame "sim"
-# set fogofwar "ENABLED"
-# set first_timeout 259200 # 3 days
-# set timeout 90000 # 25 hours
-# set unitwaittime 36000  # 10 hours
-# cmdlevel info
+set savegame "sim"
+set fogofwar "ENABLED"
+set first_timeout 259200 # 3 days
+set timeout 90000 # 25 hours
+set unitwaittime 36000  # 10 hours
+cmdlevel info
 # ----------------------------------------------------
 
 
@@ -46,7 +46,7 @@ set mapsize "PLAYER"
 set tilesperplayer 80 # <-----------------------------------------------------
 
 # general rules
-# set aifill 28 # see players.serv   <------------------------------------------
+set aifill 40 # see players.serv   <------------------------------------------
 set nationset all
 set borders enabled
 set citymindist 1
@@ -91,7 +91,7 @@ set ec_chat enabled
 set ec_info enabled 
 set ec_max_size 15000
 set ec_turns 5
-###set maxplayers 126  <---------------------------
+set maxplayers 126  <---------------------------
 set saveturns 1
 set scorelog enabled
 set fixedlength enabled  #  <------------------------------
