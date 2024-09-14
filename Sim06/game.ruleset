@@ -322,6 +322,7 @@ actor_reqs={"type","name","range"
 "DiplRel","Alliance","Local"
 "MinMoveFrags","1","Local"
 "DiplRel","Foreign","Local"
+"UnitState","OnDomesticTile","Local"
 }
 target_reqs={"type","name","range"
 "MaxUnitsOnTile","1","Local"
