@@ -1,7 +1,4 @@
-######### TEST GAME
-
-set aifill 7  # <------- test game
-#set aifill 32
+# Make sure they are human
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -9,10 +6,17 @@ aitoggle AI*4
 aitoggle AI*5
 aitoggle AI*6
 aitoggle AI*7
-playernation AI*1 Yugoslav 1 Corbeau
-playernation AI*2 Friulian 1 Blue
-playernation AI*3 Metis 1 Rorr404
-playernation AI*4 Antarctican 1 jockel
-playernation AI*5 Celtiberian 1 TriClad
-playernation AI*6 Aymara 1 bruno
-playernation AI*7 Vampire 1 XHawk87
+aitoggle AI*8
+aitoggle AI*9
+
+# Set nations
+playernation AI*1 "Friulian" 1 "Blue"
+playernation AI*2 "Metis" 1 "Rorr404"
+playernation AI*3 "Antarctican" 1 "jockel"
+playernation AI*4 "Celtiberian" 1 "TriClad"
+playernation AI*5 "Aymara" 1 "bruno"
+playernation AI*6 "Vampire" 1 "XHawk87"
+playernation AI*7 "Confederate" 1 "petromax"
+playernation AI*8 "Hessian" 1 "blabber"
+playernation AI*9 "Yugoslav" 1 "Corbeau"
+
