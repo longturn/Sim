@@ -20,7 +20,6 @@ rulesetdir Sim06
 # ----------------------------------------------------
 
 # real game settings --------------------------------
-set savegame "sim"
 set fogofwar "ENABLED"
 set first_timeout 259200 # 3 days
 set timeout 90000 # 25 hours
