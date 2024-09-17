@@ -5043,3 +5043,10 @@ reqs   =
     "CityTile","Center","Local"
     }
 
+[effect_unit_transfer_liaison]
+type   = "Unit_Bribe_Cost_Pct"
+value  = -100
+reqs   = 
+    {"type", "name", "range"
+     "DiplRel", "Alliance", "local"
+    }
