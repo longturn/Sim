@@ -4740,7 +4740,7 @@ reqs   =
     "UnitType", "Fanatics", "Local"
     }
 
-[effect_combat_rounds_Naval Inf.]
+[effect_combat_rounds_NavalInf]
 type   = "Combat_Rounds"
 value  =  15
 reqs   =
@@ -4756,7 +4756,7 @@ reqs   =
     "UnitType", "Paratroopers", "Local"
     }
 
-[effect_combat_rounds_Mech. Inf.]
+[effect_combat_rounds_MechInf]
 type   = "Combat_Rounds"
 value  =  20
 reqs   =
@@ -4868,7 +4868,7 @@ reqs   =
     "UnitType", "Bomber", "Local"
     }
 
-[effect_combat_rounds_Strategic Bomber]
+[effect_combat_rounds_StrategicBomber]
 type   = "Combat_Rounds"
 value  =  10
 reqs   =
@@ -4884,7 +4884,7 @@ reqs   =
     "UnitType", "Helicopter", "Local"
     }
 
-[effect_combat_rounds_Stealth Fighter]
+[effect_combat_rounds_StealthFighter]
 type   = "Combat_Rounds"
 value  =  10
 reqs   =
@@ -4892,7 +4892,7 @@ reqs   =
     "UnitType", "Stealth Fighter", "Local"
     }
 
-[effect_combat_rounds_Stealth Bomber]
+[effect_combat_rounds_StealthBomber]
 type   = "Combat_Rounds"
 value  =  10
 reqs   =
@@ -4964,7 +4964,7 @@ reqs   =
     "UnitType", "Cruiser", "Local"
     }
 
-[effect_combat_rounds_AEGIS Cruiser]
+[effect_combat_rounds_AEGIS]
 type   = "Combat_Rounds"
 value  =  30
 reqs   =
