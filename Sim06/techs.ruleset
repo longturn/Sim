@@ -168,7 +168,7 @@ graphic="a.chemistry"
 [advance_10]
 name=_("Chivalry")
 req1="Horseback Riding"
-req2="None"
+req2="Feudalism"
 graphic="a.chivalry"
 
 [advance_11]
