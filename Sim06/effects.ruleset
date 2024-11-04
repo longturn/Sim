@@ -393,7 +393,7 @@ reqs={"type","name","range"
 
 [effect_44]
 type="Output_Waste"
-value=0
+value=25
 reqs={"type","name","range"
 "Gov","Despotism","Player"
 "OutputType","Trade","Local"
@@ -425,7 +425,7 @@ reqs={"type","name","range"
 
 [effect_48]
 type="Output_Waste"
-value=30
+value=0
 reqs={"type","name","range"
 "Gov","Republic","Player"
 "OutputType","Trade","Local"
@@ -441,9 +441,9 @@ reqs={"type","name","range"
 
 [effect_50]
 type="Output_Waste"
-value=49
+value=50
 reqs={"type","name","range"
-"OutputType","shield","Local"
+"OutputType","Shield","Local"
 }
 
 [effect_51]
