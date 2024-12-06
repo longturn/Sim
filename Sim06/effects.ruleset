@@ -4508,8 +4508,7 @@ reqs    =
 type="Gov_Center"
 value=1
 reqs={"type","name","range"
-      	"Gov", "Republic", "Player"
-	"Building","Second Palace","City"
+      "Building","Second Palace","City"
 }
 
 [effect_local_council_i]
