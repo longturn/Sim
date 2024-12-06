@@ -191,7 +191,8 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
-"OutputType","science","Local",TRUE
+"Specialist","Scientist","Local",TRUE
+"OutputType","Science","Local",TRUE
 "Building","Library","City",TRUE
 "Gov","Anarchy","Player",FALSE
 }
@@ -200,6 +201,7 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
+"Specialist","Scientist","Local",TRUE
 "Building","University","City",TRUE
 "Gov","Anarchy","Player",FALSE
 "OutputType","science","Local",TRUE
@@ -209,6 +211,7 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
+"Specialist","Scientist","Local",TRUE
 "Building","Research Lab","City",TRUE
 "Gov","Anarchy","Player",FALSE
 "OutputType","science","Local",TRUE
@@ -218,7 +221,8 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
-"OutputType","gold","Local",TRUE
+"Specialist","Taxman","Local",TRUE
+"OutputType","Gold","Local",TRUE
 "Building","Marketplace","City",TRUE
 "Gov","Anarchy","Player",FALSE
 }
@@ -227,7 +231,8 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
-"OutputType","gold","Local",TRUE
+"Specialist","Taxman","Local",TRUE
+"OutputType","Gold","Local",TRUE
 "Building","Bank","City",TRUE
 "Gov","Anarchy","Player",FALSE
 }
@@ -236,7 +241,8 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
-"OutputType","gold","Local",TRUE
+"Specialist","Taxman","Local",TRUE
+"OutputType","Gold","Local",TRUE
 "Building","Stock Exchange","City",TRUE
 "Gov","Anarchy","Player",FALSE
 }
