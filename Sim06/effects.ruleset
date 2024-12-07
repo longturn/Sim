@@ -5001,11 +5001,9 @@ reqs   =
     "UnitType", "Carrier", "Local"
     }
 
-
 [effect_Bombard_Limit_Percent_default]
 type  = "Bombard_Limit_Pct"
 value =1
-
 
 [effect_Bombard_Limit_Percent_mountains]
 type  = "Bombard_Limit_Pct"
