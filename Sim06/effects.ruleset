@@ -2087,6 +2087,15 @@ reqs={"type","name","range","present"
 "Gov","Communism","Player",FALSE
 }
 
+[effect_farmland]
+type    = "Output_Per_Tile"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Farmland", "Local"
+      "OutputType", "Food", "Local"
+    }
+
 [effect_245]
 type="Output_Inc_Tile"
 value=1
