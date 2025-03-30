@@ -106,7 +106,7 @@ format_version=20
 [advance_0]
 name=_("Advanced Flight")
 req1="Radio"
-req2="Machine Tools"
+req2="Flight"
 graphic="a.advanced_flight"
 helptext="Enables movement of nuclear units."
 
@@ -131,8 +131,8 @@ helptext="Increases units' vision when in fortresses."
 
 [advance_4]
 name=_("Atomic Theory")
-req1="Chemistry"
-req2="Refrigeration"
+req1="Electricity"
+req2="None"
 graphic="a.atomic_theory"
 
 [advance_5]
@@ -149,8 +149,8 @@ graphic="a.banking"
 
 [advance_7]
 name=_("Bronze Working")
-req1="Tools"
-req2="Smelting"
+req1="Smelting"
+req2="None"
 graphic="a.bronze_working"
 
 [advance_8]
@@ -161,8 +161,8 @@ graphic="a.ceremonial_burial"
 
 [advance_9]
 name=_("Chemistry")
-req1="University"
-req2="Medicine"
+req1="Philosophy"
+req2="None"
 graphic="a.chemistry"
 
 [advance_10]
@@ -205,7 +205,7 @@ graphic="a.computers"
 [advance_16]
 name=_("Conscription")
 req1="Democracy"
-req2="Metallurgy"
+req2="None"
 graphic="a.conscription"
 
 [advance_17]
@@ -225,7 +225,7 @@ graphic="a.currency"
 [advance_19]
 name=_("Democracy")
 req1="Economics"
-req2="Invention"
+req2="Renaissance"
 graphic="a.democracy"
 
 [advance_20]
@@ -236,8 +236,8 @@ graphic="a.economics"
 
 [advance_21]
 name=_("Electricity")
-req1="Metallurgy"
-req2="Theory of Gravity"
+req1="Physics"
+req2="Chemistry"
 graphic="a.electricity"
 helptext="Allows irrigation without an adjacent water source, improves the effect of Amphitheaters, and increases city vision radius."
 
@@ -261,26 +261,26 @@ graphic="a.environmentalism"
 
 [advance_25]
 name=_("Espionage")
-req1="Communism"
-req2="Democracy"
+req1="Radio"
+req2="None"
 graphic="a.espionage"
 
 [advance_26]
 name=_("Explosives")
-req1="Gunpowder"
-req2="Chemistry"
+req1="Chemistry"
+req2="None"
 graphic="a.explosives"
 
 [advance_27]
-name=_("Feudalism")
-req1="Monotheism"
+name=_("Pikes")
+req1="Formation"
 req2="None"
 graphic="a.feudalism"
 
 [advance_28]
 name=_("Flight")
 req1="Machine Tools"
-req2="Mass Production"
+req2="None"
 graphic="a.flight"
 flags="Build_Airborne"
 
@@ -293,13 +293,13 @@ helptext="Makes it possible for Engineers to transform terrains."
 
 [advance_30]
 name=_("Genetic Engineering")
-req1="Refrigeration"
-req2="The Corporation"
+req1="The Corporation"
+req2="None"
 graphic="a.genetic_engineering"
 
 [advance_31]
 name=_("Gunpowder")
-req1="Physics"
+req1="Chemistry"
 req2="None"
 graphic="a.gunpowder"
 
@@ -312,26 +312,26 @@ graphic="a.horseback_riding"
 [advance_33]
 name=_("Industrialization")
 req1="Engineering"
-req2="Banking"
+req2="Railroad"
 graphic="a.industrialization"
 
 [advance_34]
 name=_("Invention")
 req1="Physics"
-req2="Literacy"
+req2="None"
 graphic="a.invention"
 helptext="Halves the upgrade ;cost of your units."
 
 [advance_35]
 name=_("Iron Working")
 req1="Bronze Working"
-req2="Warrior Code"
+req2="None"
 graphic="a.iron_working"
 
 [advance_36]
 name=_("Labor Union")
 req1="Communism"
-req2="Mobile Warfare"
+req2="None"
 graphic="a.labor_union"
 
 [advance_37]
@@ -349,13 +349,13 @@ graphic="a.leadership"
 [advance_39]
 name=_("Literacy")
 req1="Writing"
-req2="Code of Laws"
+req2="None"
 graphic="a.literacy"
 
 [advance_40]
 name=_("Machine Tools")
 req1="Steel"
-req2="Tactics"
+req2="None"
 graphic="a.machine_tools"
 
 [advance_41]
@@ -372,8 +372,8 @@ graphic="a.map_making"
 
 [advance_43]
 name=_("Masonry")
-req1="Dried Brick"
-req2="None"
+req1="Fired Brick"
+req2="Iron Working"
 graphic="a.masonry"
 
 [advance_44]
@@ -397,8 +397,8 @@ helptext="Reduces the risk of plague in your cities by additional 9% of the base
 
 [advance_47]
 name=_("Metallurgy")
-req1="Gunpowder"
-req2="None"
+req1="Physics"
+req2="Chemistry"
 graphic="a.metallurgy"
 
 [advance_48]
@@ -422,6 +422,12 @@ graphic="a.mobile_warfare"
 [advance_51]
 name=_("Monotheism")
 req1="Religion"
+req2="None"
+graphic="a.monotheism"
+
+[advance_feudalism]
+name=_("Feudalism")
+req1="Monotheism"
 req2="None"
 graphic="a.monotheism"
 
@@ -467,8 +473,8 @@ graphic="a.physics"
 
 [advance_58]
 name=_("Plastics")
-req1="Mass Production"
-req2="Robotics"
+req1="Robotics"
+req2="None"
 graphic="a.plastics"
 
 [advance_59]
@@ -480,20 +486,20 @@ graphic="a.polytheism"
 [advance_60]
 name=_("Pottery")
 req1="Fired Brick"
-req2="Culture"
+req2="None"
 graphic="a.pottery"
 
 [advance_61]
 name=_("Radio")
-req1="Flight"
-req2="Electronics"
+req1="Electronics"
+req2="None"
 graphic="a.radio"
 helptext="Allows Workers and Engineers to build airbases and buoys."
 
 [advance_62]
 name=_("Railroad")
 req1="Steam Engine"
-req2="Metallurgy"
+req2="None"
 graphic="a.railroad"
 helptext="Allows Settlers, Migrants, Workers and Engineers to upgrade roads to railroads.","Halves one-time revenue from new trade routes.","For Despotism or Tribal governments, cancels the penalty to worked tiles with output greater than 2 (as if all your cities were always celebrating)."
 
@@ -523,8 +529,8 @@ graphic="a.refrigeration"
 
 [advance_67]
 name=_("Robotics")
-req1="Mobile Warfare"
-req2="Computers"
+req1="Computers"
+req2="None"
 graphic="a.robotics"
 
 [advance_68]
@@ -560,8 +566,8 @@ graphic="a.stealth"
 
 [advance_73]
 name=_("Steam Engine")
-req1="Chemistry"
-req2="Metallurgy"
+req1="Metallurgy"
+req2="None"
 graphic="a.steam_engine"
 
 [advance_74]
@@ -578,14 +584,14 @@ graphic="a.superconductors"
 
 [advance_76]
 name=_("Tactics")
-req1="Conscription"
-req2="Leadership"
+req1="Leadership"
+req2="None"
 graphic="a.tactics"
 
 [advance_77]
 name=_("The Corporation")
-req1="Economics"
-req2="Industrialization"
+req1="Industrialization"
+req2="None"
 graphic="a.the_corporation"
 helptext="Halves the corruption of trade related to distance from the capital (or eliminates it for Federation governments)."
 
@@ -611,7 +617,7 @@ helptext="Improves the effect of Cathedrals."
 [advance_81]
 name=_("Theory of Gravity")
 req1="Physics"
-req2="University"
+req2="None"
 graphic="a.theory_of_gravity"
 
 [advance_82]
@@ -656,7 +662,7 @@ helptext="IMPORTANT! In order to produce modern ships, you must build correspond
 [advance_88]
 name=_("Formation")
 req1="Iron Working"
-req2="None"
+req2="Warrior Code"
 graphic="a.writing"
 helptext="'Pullo, formation! Pullo! Single formation!' "," ... ","'Shields on me! Get back in formation, you drunken fool!' ","- Lucius Vorenus, 'Rome' "
 
@@ -693,12 +699,12 @@ graphic="-"
 [advance_94]
 name=_("Intercontinental Ballistics")
 req1="Nuclear Doctrine"
-req2="None"
+req2="Rocketry"
 graphic="-"
 
 [advance_95]
 name=_("Culture")
-req1="None"
+req1="Tools"
 req2="None"
 graphic="-"
 cost=50
@@ -724,14 +730,14 @@ graphic="-"
 
 [advance_99]
 name=_("Smelting")
-req1="None"
+req1="Tools"
 req2="None"
 graphic="-"
 
 [advance_mass_media]
 name=_("Mass Media")
 req1="Radio"
-req2="Mass Production"
+req2="None"
 graphic="-"
 
 [advance_taxation]
@@ -739,3 +745,23 @@ name = _("Taxation")
 req1 = "Code of Laws"
 req2 = "None"
 helptext="Taxation, gentlemen, is all about extracting the maximum of milk with the minimum of moo. And I'm afraid to say that these days all I get is moo."
+
+[advance_renaissance]
+name = _("Renaissance")
+req1 = "University"
+req2 = "Physics"
+
+[advance_biology]
+name = _("Biology")
+req1 = "University"
+req2 = "Medicine"
+
+[advance_hybrid_seeds]
+name = _("Hybrid Seeds")
+req1 = "Biology"
+req2 = "The Corporation"
+
+[advance_synthetic_fertilizer]
+name = _("Synthetic Fertilizer")
+req1 = "Biology"
+req2 = "Industrialization"
