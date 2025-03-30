@@ -270,7 +270,7 @@ mining_result="none"
 mining_shield_incr=0
 mining_time=0
 transform_result="Swamp"
-transform_time=54
+transform_time=72
 animal="None"
 placing_time=1
 pillage_time=1
@@ -348,7 +348,7 @@ mining_result="yes"
 mining_shield_incr=1
 mining_time=10
 transform_result="Lake"
-transform_time=36
+transform_time=54
 animal="None"
 placing_time=1
 pillage_time=1
@@ -419,14 +419,14 @@ graphic="forest"
 graphic_alt="-"
 identifier="f"
 class="Land"
-movement_cost=3
-defense_bonus=25
+movement_cost=2
+defense_bonus=100
 food=1
 shield=2
 resources="Pheasant","Silk"
 base_time=1
 road_time=4
-cultivate_time=10
+cultivate_time=20
 plant_time=0
 irrigation_result="Plains"
 irrigation_food_incr=0
@@ -434,7 +434,7 @@ irrigation_time=0
 mining_result="none"
 mining_shield_incr=0
 mining_time=0
-transform_result="Hills"
+transform_result="none"
 transform_time=24
 animal="None"
 placing_time=1
@@ -478,7 +478,7 @@ mining_result="Forest"
 mining_shield_incr=0
 mining_time=10
 transform_result="Swamp"
-transform_time=12
+transform_time=24
 animal="None"
 placing_time=1
 pillage_time=1
@@ -503,8 +503,8 @@ graphic="hills"
 graphic_alt="-"
 identifier="h"
 class="Land"
-movement_cost=4
-defense_bonus=50
+movement_cost=3
+defense_bonus=200
 food=1
 shield=1
 resources="Coal","Wine"
@@ -546,15 +546,15 @@ graphic="jungle"
 graphic_alt="-"
 identifier="j"
 class="Land"
-movement_cost=5
-defense_bonus=25
+movement_cost=4
+defense_bonus=300
 food=1
 shield=1
 trade=1
 resources="Gems","Fruit"
 base_time=1
 road_time=4
-cultivate_time=10
+cultivate_time=20
 plant_time=0
 irrigation_result="Swamp"
 irrigation_food_incr=0
@@ -591,7 +591,7 @@ graphic_alt="-"
 identifier="m"
 class="Land"
 movement_cost=7
-defense_bonus=100
+defense_bonus=500
 shield=1
 resources="Gold","Iron"
 base_time=1
@@ -648,8 +648,8 @@ irrigation_time=5
 mining_result="Forest"
 mining_shield_incr=0
 mining_time=0
-transform_result="Lake"
-transform_time=36
+transform_result="none"
+transform_time=0
 animal="None"
 placing_time=1
 pillage_time=1
@@ -674,8 +674,8 @@ graphic="swamp"
 graphic_alt="-"
 identifier="s"
 class="Land"
-movement_cost=4
-defense_bonus=25
+movement_cost=3
+defense_bonus=100
 food=1
 resources="Peat","Spice"
 base_time=1
@@ -689,7 +689,7 @@ mining_result="none"
 mining_shield_incr=0
 mining_time=0
 transform_result="Ocean"
-transform_time=24
+transform_time=36
 animal="None"
 placing_time=1
 pillage_time=1
@@ -733,7 +733,7 @@ mining_result="none"
 mining_shield_incr=0
 mining_time=0
 transform_result="Plains"
-transform_time=30
+transform_time=36
 animal="None"
 placing_time=1
 pillage_time=1
@@ -1455,7 +1455,7 @@ act_gfx_alt="unit.mine"
 act_gfx_alt2="unit.plant"
 rmact_gfx="None"
 reqs={"type","name","range","present","quiet"
-"Tech","Refining","Player",TRUE,FALSE
+;"Tech","Refining","Player",TRUE,FALSE
 "TerrainFlag","Oil","Local",TRUE,TRUE
 "Extra","Mine","Local",TRUE,FALSE
 "UnitClass","Sea","Local",FALSE,TRUE
@@ -1590,10 +1590,10 @@ build_time=0
 removal_time=0
 conflicts="Mine","Oil Well","Resort"
 helptext=_("Once Refrigeration is known, irrigation systems can be upgraded to farmland\
- by irrigating them a second time; if the city working the tile has a Supermarket, a\
- farmland tile provides 50% more food. (Hence, farmland is only useful on tiles which\
- with irrigation yield 2 or more food.) Farmland on a tile prevents any trade bonus from\
- Super Highways. Like irrigation, farmland is incompatible with mines and oil wells.")
+ by irrigating them a second time; farmland tile provides 50% more food.\ 
+ Hence, farmland is only useful on tiles which with irrigation yield 2 or more food.\
+ Farmland on a tile prevents any trade bonus from Super Highways. Like irrigation, \
+ farmland is incompatible with mines and oil wells.")
 
 [extra_28]
 name=_("Fallout")
@@ -1816,7 +1816,7 @@ hidden_by="Railroad","Maglev"
 helptext=_("Roads allow your land units to move more quickly, and allow wheeled Big Land\
  units such as Chariots and Catapults to travel through otherwise difficult terrain (Mountains,\
  Jungle, and Swamp). On some terrains, roads also provide a trade bonus. Building roads on\
- river tiles requires knowledge of Bridge Building. City center tiles automatically get\
+ river tiles requires knowledge of Construction. City center tiles automatically get\
  roads (even on a river tile).")
 
 [extra_37]
@@ -1894,7 +1894,7 @@ helptext=_("Any land terrain type may have a River on it. A River adds 1 trade t
  resources produced by that tile. It also increases a tile's defense factor by 25%.\
  Land units may move along rivers for faster travel (but not diagonally). Triremes\
  may also travel up rivers (although later boats cannot). Roads and railroads can only\
- be built on River tiles if your civilization has learned Bridge Building technology.\
+ be built on River tiles if your civilization has learned Construction technology.\
  Fortresses and Airbases cannot be built on River tiles. Cities built on or next to\
  rivers incur a small risk of flooding, which will destroy stored food.")
 
