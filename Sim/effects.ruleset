@@ -8,11 +8,14 @@
 ; Note that the freeciv AI may not cope well with anything more
 ; than minor changes.
 
+*include "effects/migration.effects"
+*include "effects/tribal.effects"
+
 
 [datafile]
 description="Sim ruleset effect data for Freeciv21"
 ruledit="3.0.601765.2-rc"
-options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Wonder_Visible Vision_Layer Nation_Intelligence Bombard_Limit_Pct"
+options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Bombard_Limit_Pct Wonder_Visible Vision_Layer Nation_Intelligence"
 format_version=20
 ; /* <-- avoid gettext warnings
 ;
@@ -28,6 +31,123 @@ format_version=20
 ;                           See README.effects for help on requirements
 ;
 ; */ <-- avoid gettext warnings
+
+; start at -15,000
+
+[effect_calendar_base]
+type    = "Turn_Years"
+value   = 500
+
+; T20 = 5000 BC
+
+; 500 - 300 = 200 
+[effect_calendar_1]
+type    = "Turn_Years"
+value   = -300
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "-5000", "World"
+    }
+
+; T40 = 1000 BC
+
+; 200 - 150 = 50 
+[effect_calendar_2]
+type    = "Turn_Years"
+value   = -150
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "-1000", "World"
+    }
+
+; T60 = 0 AD
+
+; 50 - 25 = 25 
+[effect_calendar_3]
+type    = "Turn_Years"
+value   = -25
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "0", "World"
+    }
+
+; T100 = 1000 AD
+
+; 25 - 5 = 20 
+[effect_calendar_4]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1000", "World"
+    }
+
+; T120 = 1400 AD
+
+; 20 - 5 = 15 
+[effect_calendar_5]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1400", "World"
+    }
+
+; T140 = 1700 AD
+
+; 15 - 5 = 10 
+[effect_calendar_6]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1700", "World"
+    }
+
+; T155 = 1850 AD
+
+; 10 - 5 = 5 
+[effect_calendar_7]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1850", "World"
+    }
+
+; T165 = 1900 AD
+
+; 5 - 2 = 3 
+[effect_calendar_8]
+type    = "Turn_Years"
+value   = -2
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1900", "World"
+    }
+
+; T175 = 1930 AD
+
+; 3 - 1 = 2 
+[effect_calendar_9]
+type    = "Turn_Years"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1930", "World"
+    }
+
+; T180 = 1940 AD
+
+
+; 2 - 1 = 1 
+[effect_calendar_10]
+type    = "Turn_Years"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1940", "World"
+    }
 
 
 [effect_0]
@@ -49,7 +169,7 @@ type="Output_Bonus_2"
 value=40
 reqs={"type","name","range"
 "AI","Cheating","Player"
-"OutputType","science","Local"
+"OutputType","Science","Local"
 }
 
 [effect_3]
@@ -57,7 +177,7 @@ type="Output_Bonus_2"
 value=40
 reqs={"type","name","range"
 "AI","Cheating","Player"
-"OutputType","luxury","Local"
+"OutputType","Luxury","Local"
 }
 
 [effect_4]
@@ -65,7 +185,7 @@ type="Output_Bonus_2"
 value=40
 reqs={"type","name","range"
 "AI","Cheating","Player"
-"OutputType","gold","Local"
+"OutputType","Gold","Local"
 }
 
 [effect_5]
@@ -73,7 +193,7 @@ type="Output_Bonus_2"
 value=40
 reqs={"type","name","range"
 "AI","Cheating","Player"
-"OutputType","shield","Local"
+"OutputType","Shield","Local"
 }
 
 [effect_6]
@@ -143,13 +263,6 @@ reqs={"type","name","range"
 "Gov","Anarchy","Player"
 }
 
-[effect_15]
-type="City_Unhappy_Size"
-value=2
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-}
-
 [effect_16]
 type="No_Diplomacy"
 value=1
@@ -182,9 +295,10 @@ reqs={"type","name","range"
 type="Specialist_Output"
 value=2
 reqs={"type","name","range","present"
-"Specialist","elvis","Local",TRUE
+"Specialist","Elvis","Local",TRUE
 "Gov","Anarchy","Player",FALSE
-"OutputType","luxury","Local",TRUE
+"OutputType","Luxury","Local",TRUE
+"Gov","Tribal","Player",FALSE
 }
 
 [effect_21]
@@ -195,14 +309,15 @@ reqs={"type","name","range","present"
 "OutputType","Science","Local",TRUE
 "Building","Library","City",TRUE
 "Gov","Anarchy","Player",FALSE
+"Gov","Tribal","Player",FALSE
 }
 
 [effect_22]
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
-"Specialist","Scientist","Local",TRUE
 "Building","University","City",TRUE
+"Specialist","Scientist","Local",TRUE
 "Gov","Anarchy","Player",FALSE
 "OutputType","science","Local",TRUE
 }
@@ -211,8 +326,8 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
-"Specialist","Scientist","Local",TRUE
 "Building","Research Lab","City",TRUE
+"Specialist","Scientist","Local",TRUE
 "Gov","Anarchy","Player",FALSE
 "OutputType","science","Local",TRUE
 }
@@ -231,8 +346,8 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
+"OutputType","gold","Local",TRUE
 "Specialist","Taxman","Local",TRUE
-"OutputType","Gold","Local",TRUE
 "Building","Bank","City",TRUE
 "Gov","Anarchy","Player",FALSE
 }
@@ -241,8 +356,8 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
+"OutputType","gold","Local",TRUE
 "Specialist","Taxman","Local",TRUE
-"OutputType","Gold","Local",TRUE
 "Building","Stock Exchange","City",TRUE
 "Gov","Anarchy","Player",FALSE
 }
@@ -257,6 +372,16 @@ value=20
 reqs={"type","name","range"
 "CityTile","Center","Local"
 }
+
+[effect_Tribe_healing]
+type="HP_Regen"
+value=30
+reqs={"type","name","range"
+"CityTile","Center","Local"
+"UnitType", "Tribe", "Local"
+"CityTile","Center","Local"
+}
+
 
 [effect_29]
 type="Unit_Vision_Radius_Sq"
@@ -277,6 +402,14 @@ reqs={"type","name","range","present"
 "UnitClass","Air","Local",FALSE
 "UnitClass","Missile","Local",FALSE
 }
+
+[effect_fortified]
+type    = "Fortify_Defense_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Activity", "Fortified", "Local"
+    }
 
 [effect_31]
 type="Defend_Bonus"
@@ -394,7 +527,7 @@ type="Output_Waste_By_Distance"
 value=-100
 reqs={"type","name","range"
 "Gov","Anarchy","Player"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 }
 
 [effect_44]
@@ -447,9 +580,9 @@ reqs={"type","name","range"
 
 [effect_50]
 type="Output_Waste"
-value=50
+value=49
 reqs={"type","name","range"
-"OutputType","Shield","Local"
+"OutputType","shield","Local"
 }
 
 [effect_51]
@@ -459,12 +592,6 @@ reqs={"type","name","range"
 "Gov","Anarchy","Player"
 }
 
-[effect_52]
-type="Upkeep_Free"
-value=99
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-}
 
 [effect_53]
 type="Upkeep_Free"
@@ -484,22 +611,22 @@ reqs={"type","name","range"
 type="Upkeep_Factor"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 }
 
-[effect_56]
-type="Unhappy_Factor"
-value=1
-reqs={"type","name","range","present"
-"Gov","Democracy","Player",FALSE
-}
-
-[effect_57]
-type="Unhappy_Factor"
-value=2
-reqs={"type","name","range"
-"Gov","Democracy","Player"
-}
+;[effect_56]
+;type="Unhappy_Factor"
+;value=1
+;reqs={"type","name","range","present"
+;"Gov","Democracy","Player",FALSE
+;}
+;
+;[effect_57]
+;type="Unhappy_Factor"
+;value=2
+;reqs={"type","name","range"
+;"Gov","Democracy","Player"
+;}
 
 [effect_58]
 type="Make_Content_Mil"
@@ -529,14 +656,6 @@ value=99
 reqs={"type","name","range"
 "OutputType","gold","Local"
 "Gov","Anarchy","Player"
-}
-
-[effect_62]
-type="Unit_Upkeep_Free_Per_City"
-value=99
-reqs={"type","name","range"
-"OutputType","gold","Local"
-"Gov","Tribal","Player"
 }
 
 [effect_63]
@@ -618,27 +737,12 @@ reqs={"type","name","range"
 "Gov","Anarchy","Player"
 }
 
-[effect_73]
-type="Unit_Upkeep_Free_Per_City"
-value=99
-reqs={"type","name","range"
-"OutputType","shield","Local"
-"Gov","Tribal","Player"
-}
-
-[effect_74]
-type="Unit_Upkeep_Free_Per_City"
-value=99
-reqs={"type","name","range"
-"OutputType","food","Local"
-"Gov","Tribal","Player"
-}
 
 [effect_75]
 type="Unit_Upkeep_Free_Per_City"
 value=99
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "Gov","Anarchy","Player"
 }
 
@@ -646,7 +750,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=5
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "Gov","Despotism","Player"
 }
 
@@ -654,7 +758,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=4
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "Gov","Monarchy","Player"
 }
 
@@ -662,7 +766,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=5
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "Gov","Fundamentalism","Player"
 }
 
@@ -670,7 +774,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=2
 reqs={"type","name","range","present"
-"OutputType","food","Local",TRUE
+"OutputType","Food","Local",TRUE
 "Gov","Anarchy","Player",FALSE
 "Gov","Tribal","Player",FALSE
 "Gov","Despotism","Player",FALSE
@@ -682,7 +786,7 @@ reqs={"type","name","range","present"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","2","City"
 }
 
@@ -690,7 +794,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","4","City"
 }
 
@@ -698,7 +802,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","6","City"
 }
 
@@ -706,7 +810,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","8","City"
 }
 
@@ -714,14 +818,15 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
+"MinSize","10","City"
 }
 
 [effect_85]
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","12","City"
 }
 
@@ -729,7 +834,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","14","City"
 }
 
@@ -737,7 +842,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","16","City"
 }
 
@@ -745,7 +850,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","18","City"
 }
 
@@ -753,7 +858,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","20","City"
 }
 
@@ -761,7 +866,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","22","City"
 }
 
@@ -769,7 +874,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","24","City"
 }
 
@@ -777,7 +882,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","26","City"
 }
 
@@ -785,7 +890,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","28","City"
 }
 
@@ -793,7 +898,7 @@ reqs={"type","name","range"
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "MinSize","30","City"
 }
 
@@ -878,12 +983,6 @@ reqs={"type","name","range"
 "Gov","Monarchy","Player"
 }
 
-[effect_107]
-type="Martial_Law_Each"
-value=2
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-}
 
 [effect_108]
 type="Martial_Law_Each"
@@ -899,12 +998,6 @@ reqs={"type","name","range"
 "Gov","Anarchy","Player"
 }
 
-[effect_110]
-type="Martial_Law_Max"
-value=3
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-}
 
 [effect_111]
 type="Martial_Law_Max"
@@ -927,14 +1020,8 @@ reqs={"type","name","range"
 "Gov","Communism","Player"
 }
 
-[effect_114]
-type="Output_Penalty_Tile"
-value=2
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-}
 
-[effect_115]
+[effect_tile_penalty]
 type="Output_Penalty_Tile"
 value=2
 reqs={"type","name","range","present"
@@ -945,6 +1032,7 @@ reqs={"type","name","range","present"
 "Gov","Communism","Player",FALSE
 "Gov","Democracy","Player",FALSE
 "Building","Pyramids","Player",FALSE
+"OutputType", "Food", "Local", FALSE
 }
 
 [effect_116]
@@ -975,6 +1063,14 @@ reqs={"type","name","range","present"
 "Gov","Communism","Player",FALSE
 "Gov","Despotism","Player",FALSE
 "Gov","Fundamentalism","Player",FALSE
+}
+
+[effect_celebration_communism]
+type="Output_Inc_Tile_Celebrate"
+value=1
+reqs={"type","name","range"
+"OutputType","Shield","Local"
+"Gov","Communism","Player"
 }
 
 [effect_119]
@@ -1031,22 +1127,6 @@ reqs={"type","name","range"
 "OutputType","Trade","Local"
 }
 
-[effect_125]
-type="Output_Bonus"
-value=-100
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-"OutputType","gold","Local"
-}
-
-[effect_126]
-type="Output_Bonus"
-value=-100
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-"OutputType","science","Local"
-}
-
 [effect_127]
 type="Output_Bonus_2"
 value=-50
@@ -1091,7 +1171,7 @@ reqs={"type","name","range","present"
 
 [effect_132]
 type="HP_Regen"
-value=100
+value=50
 reqs={"type","name","range"
 "Building","Airport","City"
 "UnitClass","Air","Local"
@@ -1099,7 +1179,7 @@ reqs={"type","name","range"
 
 [effect_133]
 type="HP_Regen"
-value=100
+value=50
 reqs={"type","name","range"
 "Building","Airport","City"
 "UnitClass","Helicopter","Local"
@@ -1370,7 +1450,7 @@ type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
 "Building","Colosseum","City",TRUE
-"Specialist","elvis","Local",TRUE
+"Specialist","Elvis","Local",TRUE
 "OutputType","luxury","Local",TRUE
 "Gov","Anarchy","Player",FALSE
 }
@@ -1419,7 +1499,7 @@ type="Output_Waste_Pct"
 value=25
 reqs={"type","name","range"
 "Building","Granary","City"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 }
 
 [effect_169]
@@ -1594,8 +1674,8 @@ type="Output_Add_Tile"
 value=1
 reqs={"type","name","range","present"
 "TerrainClass","Oceanic","Local",TRUE
-"Building","Fishing Harbour","City",TRUE
-"OutputType","food","Local",TRUE
+"Building","Fishery","City",TRUE
+"OutputType","Food","Local",TRUE
 "Terrain","Lake","Local",FALSE
 }
 
@@ -1772,6 +1852,15 @@ type="Output_Add_Tile"
 value=2
 reqs={"type","name","range"
 "Terrain","Mountains","Local"
+"Extra","Resort","Local"
+"OutputType","Trade","Local"
+}
+
+[effect_resort_hills]
+type="Output_Add_Tile"
+value=2
+reqs={"type","name","range"
+"Terrain","Hills","Local"
 "Extra","Resort","Local"
 "OutputType","Trade","Local"
 }
@@ -2161,7 +2250,7 @@ value=51
 reqs={"type","name","range"
 "Tech","Refrigeration","Player"
 "CityTile","Center","Local"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 }
 
 [effect_252]
@@ -2184,7 +2273,7 @@ reqs={"type","name","range","present"
 
 [effect_254]
 type="Output_Bonus"
-value=100
+value=150
 reqs={"type","name","range"
 "Building","University","City"
 "OutputType","science","Local"
@@ -2238,6 +2327,15 @@ reqs={"type","name","range","present"
 "OutputType","luxury","Local",TRUE
 "Gov","Anarchy","Player",FALSE
 }
+
+[effect_cancer_plague]
+type="Health_Pct"
+value=10
+reqs={"type","name","range","present"
+"Building","Cure For Cancer","Player",TRUE
+}
+
+
 
 [effect_261]
 type="Output_Add_Tile"
@@ -2760,7 +2858,7 @@ value=1
 reqs={"type","name","range","present"
 "Terrain","Desert","Local",TRUE
 "Extra","River","Local",TRUE
-"OutputType","food","Local",TRUE
+"OutputType","Food","Local",TRUE
 "Extra","Oasis","Local",FALSE
 }
 
@@ -2775,14 +2873,6 @@ reqs={"type","name","range"
 [effect_325]
 type="Pollu_Pop_Pct"
 value=-100
-
-[effect_326]
-type="Tech_Upkeep_Free"
-value=0
-reqs={"type","name","range","present"
-"Gov","Tribal","Player",FALSE
-"Gov","Anarchy","Player",FALSE
-}
 
 [effect_327]
 type="Tech_Upkeep_Free"
@@ -3466,7 +3556,7 @@ reqs={"type","name","range"
 type="City_Radius_Sq"
 value=1
 reqs={"type","name","range"
-"Building","Fishing Harbour","City"
+"Building","Fishery","City"
 }
 
 [effect_414]
@@ -3854,30 +3944,6 @@ reqs={"type","name","range","present"
 "UnitFlag","IgWall","Local",FALSE
 }
 
-[effect_457]
-type="Migration_Pct"
-value=100
-reqs={"type","name","range","present"
-"MinSize","1","City",TRUE
-"MinSize","2","City",FALSE
-}
-
-[effect_458]
-type="Migration_Pct"
-value=1000
-reqs={"type","name","range","present"
-"MinSize","1","City",TRUE
-"Building","Granary","City",TRUE
-"MinSize","2","City",FALSE
-}
-
-[effect_459]
-type="Migration_Pct"
-value=200
-reqs={"type","name","range"
-"Building","City Hall","City"
-}
-
 [effect_460]
 type="Make_Content"
 value=2
@@ -3929,50 +3995,6 @@ reqs={"type","name","range"
 "OutputType","Trade","Local"
 }
 
-[effect_467]
-type="Migration_Pct"
-value=1000
-reqs={"type","name","range","present"
-"Building","Governor's Office","City",TRUE
-"Building","Granary","City",FALSE
-}
-
-[effect_468]
-type="Migration_Pct"
-value=500
-reqs={"type","name","range"
-"Building","Governor's Office","City"
-"Building","Granary","City"
-}
-
-[effect_469]
-type="Output_Add_Tile"
-value=1
-reqs={"type","name","range"
-"CityTile","Center","Local"
-"OutputType","food","Local"
-"Gov","Tribal","Player"
-}
-
-[effect_470]
-type="Output_Add_Tile"
-value=1
-reqs={"type","name","range"
-"CityTile","Center","Local"
-"OutputType","food","Local"
-"Building","Palace","City"
-"Gov","Tribal","Player"
-}
-
-[effect_471]
-type="Output_Add_Tile"
-value=1
-reqs={"type","name","range"
-"CityTile","Center","Local"
-"OutputType","shield","Local"
-"Building","Palace","City"
-"Gov","Tribal","Player"
-}
 
 [effect_472]
 type="Veteran_Build"
@@ -4019,7 +4041,7 @@ type="Output_Add_Tile"
 value=3
 reqs={"type","name","range"
 "CityTile","Center","Local"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "Building","Food Market","City"
 }
 
@@ -4028,7 +4050,7 @@ type="Output_Add_Tile"
 value=4
 reqs={"type","name","range"
 "CityTile","Center","Local"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "Building","Grocery Store","City"
 }
 
@@ -4037,7 +4059,7 @@ type="Output_Add_Tile"
 value=5
 reqs={"type","name","range"
 "CityTile","Center","Local"
-"OutputType","food","Local"
+"OutputType","Food","Local"
 "Building","Shopping Mall","City"
 }
 
@@ -4075,7 +4097,7 @@ reqs={"type","name","range"
 
 [effect_483]
 type="Defend_Bonus"
-value=50
+value=100
 reqs={"type","name","range","present"
 "Terrain","Forest","Local",TRUE
 "UnitFlag","Fast","Local",TRUE
@@ -4084,7 +4106,7 @@ reqs={"type","name","range","present"
 
 [effect_484]
 type="Defend_Bonus"
-value=100
+value=200
 reqs={"type","name","range","present"
 "Terrain","Jungle","Local",TRUE
 "UnitFlag","Fast","Local",TRUE
@@ -4093,7 +4115,7 @@ reqs={"type","name","range","present"
 
 [effect_485]
 type="Defend_Bonus"
-value=50
+value=10
 reqs={"type","name","range","present"
 "Terrain","Swamp","Local",TRUE
 "UnitFlag","Fast","Local",TRUE
@@ -4102,7 +4124,7 @@ reqs={"type","name","range","present"
 
 [effect_486]
 type="Defend_Bonus"
-value=50
+value=100
 reqs={"type","name","range","present"
 "Terrain","Hills","Local",TRUE
 "UnitFlag","Fast","Local",TRUE
@@ -4350,22 +4372,6 @@ reqs={"type","name","range"
 "Building","Police 10th Precinct","City"
 }
 
-[effect_519]
-type="Shield2Gold_Factor"
-value=100
-reqs={"type","name","range","present"
-"Gov","Tribal","Player",FALSE
-"UnitType","Raiders","Local",TRUE
-}
-
-[effect_520]
-type="Shield2Gold_Factor"
-value=100
-reqs={"type","name","range","present"
-"Gov","Tribal","Player",FALSE
-"UnitType","Bowmen","Local",TRUE
-}
-
 [effect_521]
 type="Output_Bonus"
 value=-100
@@ -4374,25 +4380,6 @@ reqs={"type","name","range"
 "OutputType","shield","Local"
 }
 
-[effect_522]
-type="Output_Add_Tile"
-value=1
-reqs={"type","name","range","present"
-"Building","Extra Field","City",TRUE
-"OutputType","food","Local",TRUE
-"CityTile","Center","Local",TRUE
-"MinSize","3","City",FALSE
-}
-
-[effect_523]
-type="Output_Add_Tile"
-value=1
-reqs={"type","name","range"
-"Building","Extra Field","City"
-"OutputType","food","Local"
-"CityTile","Center","Local"
-"MinSize","3","City"
-}
 
 [effect_524]
 type="Wonder_Visible"
@@ -4517,6 +4504,22 @@ reqs    =
     }
 
 
+[effect_pollution]
+type	= "Output_Tile_Punish_Pct"
+value	= 50
+reqs	=
+    { "type", "name", "range", "present"
+      "Extra", "Pollution", "Local", TRUE
+    }
+
+[effect_fallout]
+type	= "Output_Tile_Punish_Pct"
+value	= 50
+reqs	=
+    { "type", "name", "range", "present"
+      "Extra", "Fallout", "Local", TRUE
+    }
+
 ;;;;;;;;;;;;;;;;;;;; LOCAL COUNCILS ;;;;;;;;;;;;;;;;;;;;;
 
 [effect_214]
@@ -4628,7 +4631,7 @@ reqs={"type","name","range"
 
 [effect_combat_rounds_Raiders]
 type   = "Combat_Rounds"
-value  =  10
+value  =  5
 reqs   =
     { "type", "name", "range"
     "UnitType", "Raiders", "Local"
@@ -5010,6 +5013,14 @@ reqs   =
     "UnitType", "Carrier", "Local"
     }
 
+[effect_combat_rounds_ICBM]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "ICBM", "Local"
+    }
+
 [effect_Bombard_Limit_Percent_default]
 type  = "Bombard_Limit_Pct"
 value =1
@@ -5018,8 +5029,8 @@ value =1
 type  = "Bombard_Limit_Pct"
 value = 19
 reqs   =
-    { "type", "name", "range", "present"
-    "Terrain", "Mountains", "Local", TRUE
+    { "type", "name", "range"
+    "Terrain", "Mountains", "Local"
     "CityTile","Center","Local", FALSE
     }
 
@@ -5027,8 +5038,8 @@ reqs   =
 type  = "Bombard_Limit_Pct"
 value = 29
 reqs   =
-    { "type", "name", "range", "present"
-    "Terrain", "Forest", "Local", TRUE
+    { "type", "name", "range"
+    "Terrain", "Forest", "Local"
     "CityTile","Center","Local", FALSE
     }
 
@@ -5036,8 +5047,8 @@ reqs   =
 type  = "Bombard_Limit_Pct"
 value = 39
 reqs   =
-    { "type", "name", "range", "present"
-    "Terrain", "Jungle", "Local", TRUE
+    { "type", "name", "range"
+    "Terrain", "Jungle", "Local"
     "CityTile","Center","Local", FALSE
     }
 
@@ -5056,3 +5067,88 @@ reqs   =
     {"type", "name", "range"
      "DiplRel", "Alliance", "local"
     }
+
+;;;;;;;;;;;;;;;;;;; MULTIPLIERS ;;;;;;;;;;;;;;;;;;
+
+[effect_personal_freedom_unit_unhappiness]
+type    	= "Unhappy_Factor"
+value   	= 1
+multiplier 	= "Civilian Society"
+reqs   		=
+    	{ 	"type", "name", "range"
+    		"Gov", "Democracy", "Player"
+    	}
+
+[effect_personal_freedom_science_bonus]
+type    = "Output_Bonus_2"
+value   = 10
+multiplier = "Civilian Society"
+reqs   =
+    { "type", "name", "range"
+      "OutputType", "Trade", "Local"
+      "Gov", "Democracy", "player"
+    }
+
+[effect_tech_upkeep_free]
+type="Tech_Upkeep_Free"
+value=5
+reqs	=
+    {	"type","name","range","present"
+	"Gov","Tribal","Player",FALSE
+	"Gov","Anarchy","Player",FALSE
+    }
+
+[effect_personal_corruption_vs_infrastructure]
+type    = "Output_Waste"
+value   = 5
+multiplier = "Infrastructure"
+reqs   =
+    { "type", "name", "range", "present"
+      "OutputType", "Trade", "Local", TRUE
+      "Gov", "Tribal", "player", FALSE
+      "Gov", "Anarchy", "player", FALSE
+    }
+
+[effect_personal_infrastructure_vs_corruption]
+type	= "Tech_Upkeep_Free"
+value	= -1
+multiplier = "Infrastructure"
+reqs   =
+    { "type", "name", "range", "present"
+      "Gov", "Tribal", "player", FALSE
+      "Gov", "Anarchy", "player", FALSE
+    }
+
+[effect_military-industrial_complex_weapons]
+type	= "Unit_Build_Cost_Pct"
+multiplier = "Military-industrial complex"
+value	= -10
+
+[effect_military-industrial_complex_science]
+type	= "Output_Waste"
+value	= 5
+multiplier = "Military-industrial complex"
+reqs	=
+    { "type", "name", "range"
+      "OutputType", "Science", "Local"
+    }
+
+;[effect_city_maintenance]
+;type="Output_Add_Tile"
+;value=-3
+;reqs={"type","name","range","present"
+;"CityTile","Center","Local",TRUE
+;"OutputType","Gold","Local",TRUE
+;}
+
+;[effect_probing_attack_raiders]
+;type   = "Combat_Rounds"
+;value  =  1
+;reqs   =
+;    { "type", "name", "range"
+;    "UnitType", "Raiders", "Local"
+;    "Activity", "Fortifying", "Local"
+;    }
+
+
+; Multipliers: 10hp, 15hp, 20hp; probe attack: 4, 6, 8; full attack: 10, 15, 20 rounds; RAIDERS
