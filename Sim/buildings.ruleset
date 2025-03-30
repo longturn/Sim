@@ -155,6 +155,9 @@ genus="Improvement"
 graphic="b.barracks_i"
 sound="b_barracks_i"
 sound_alt="b_generic"
+reqs={"type","name","range","present"
+"Gov", "Tribal","Player",FALSE
+}
 obsolete_by={"type","name","range"
 "Tech","Leadership","Player"
 "Building","Barracks II","City"
@@ -163,7 +166,7 @@ obsolete_by={"type","name","range"
 build_cost=30
 upkeep=1
 sabotage=100
-helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in a town with barracks without moving heal more quicly.  Barracks have no effect under Tribal government."
+helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in town for one full  turn without moving are completely restored.  Barracks have no effect under Tribal government."
 
 [building_8]
 name=_("Barracks II")
@@ -182,7 +185,7 @@ obsolete_by={"type","name","range"
 build_cost=40
 upkeep=1
 sabotage=100
-helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in a town with barracks without moving heal more quicly."
+helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in town for one full  turn without moving are completely restored."
 
 [building_9]
 name=_("Barracks III")
@@ -197,7 +200,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=1
 sabotage=100
-helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in a town with barracks without moving heal more quicly."
+helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in town for one full  turn without moving are completely restored."
 
 [building_10]
 name=_("Cathedral")
@@ -227,7 +230,7 @@ reqs={"type","name","range"
 build_cost=40
 upkeep=1
 sabotage=100
-helptext="City Hall is the step that signifies the upgrade of a village or a settlement into a city. With this building, the chance of migration into the city is increased. ", "This building makes one unhappy citizen content."
+helptext="City Hall is the step that signifies the upgrade of a village or a settlement into a city. With this building, the chance of migration into the city is increased. ", "This building makes two unhappy citizens content."
 
 [building_12]
 name=_("City Walls")
@@ -317,8 +320,8 @@ sabotage=100
 helptext="When any small city grows or shrinks, some food points are saved; this helps cities to grow faster and more easily withstand famine. With a Granary this is extended to cities of size 4 and above. ","A Granary also halves the food wasted in cities far from your capital. ","Granary decreases the chance that population will migrate to bigger cities.","TIP: to maximise the speed with which a city grows, you should build a Granary before it grows larger than size 4."
 
 [building_18]
-name=_("Fishing Harbor")
-rule_name="Fishing Harbour"
+name=_("Fishery")
+rule_name="Fishery"
 genus="Improvement"
 graphic="b.harbour"
 sound="b_harbour"
@@ -371,7 +374,7 @@ reqs={"type","name","range"
 "Tech","Currency","Player"
 }
 build_cost=40
-upkeep=0
+upkeep=1
 sabotage=100
 helptext="Increases the luxury and tax output in a city by 50%.", "Makes it possible for Taxmen to extract gold from the population. Each Taxman yields 1 gold per turn."
 
@@ -655,7 +658,7 @@ reqs={"type","name","range"
 "Tech","Economics","Player"
 "Building","Bank","City"
 }
-build_cost=100
+build_cost=150
 upkeep=2
 sabotage=100
 helptext="Increases the luxury and tax output in a city by an additional 50%, or 100% if Super Highways are also in the city. A Marketplace, Bank, and Stock Exchange together in a city yield a total bonus of 150%; adding Super Highways yields a total of 200%.", "Stock Exchange doesn't have any effect under a Communist government.", "Adds 1 gold per Taxmen."
@@ -712,10 +715,10 @@ reqs={"type","name","range"
 "Tech","University","Player"
 "Building","Library","City"
 }
-build_cost=70
+build_cost=150
 upkeep=2
 sabotage=100
-helptext="Increases the science output in a city by an additional 50%, or by 100% once Isaac Newton's College has been built by any player.","The total bonus is 100% if a Library and a University are present together in the same city, increasing to 200% once the Great Library and Isaac Newton's College have both been built.", "Each employed Scientists now contributes 2 research points every turn.", "Under Democracy, University makes additional citizen unhappy for each aggressively deployed military unit.", "Units constructed in a city with this building have one additionalveteran level.", "Decreases corruption by a small amount, depending on government."
+helptext="Increases science output in the city where it is built. See Output_Bonus effect.","Each employed Scientists now contributes more research points every turn. See Specialist_Output effect.", "Under Democracy, University makes additional citizen unhappy for each aggressively deployed military unit.", "Units constructed in a city with this building may have additional veteran levels, depending on the ruleset. See Veteran_Build effect.", "Decreases corruption by a small amount, depending on government."
 
 [building_45]
 name=_("U235 Enrichment Plant")
@@ -851,7 +854,7 @@ reqs={"type","name","range"
 build_cost=300
 upkeep=0
 sabotage=0
-helptext="Charles Darwin's voyage sparked the discovery of the evolution of the species, which inspired greater confidence in science. All your cities generate 1 extra science bulb.","Upon completion of this wonder, scientist specialists' research output increases to 3 permanently for every nation."
+helptext="Charles Darwin's voyage sparked the discovery of the evolution of the species, which inspired greater confidence in science. All your cities generate 1 extra science bulb."
 
 [building_54]
 name=_("Eiffel Tower")
@@ -907,6 +910,7 @@ sound="w_hanging_gardens"
 sound_alt="w_generic"
 reqs={"type","name","range"
 "Tech","Pottery","Player"
+"Tech","Culture","Player"
 }
 obsolete_by={"type","name","range"
 "Tech","Electricity","Player"
@@ -1153,10 +1157,7 @@ graphic="b.sun_tzus_war_academy"
 sound="w_sun_tzus_war_academy"
 sound_alt="w_generic"
 reqs={"type","name","range"
-"Tech","Feudalism","Player"
-}
-obsolete_by={"type","name","range"
-"Tech","Mobile Warfare","Player"
+"Gov","Monarchy","Player"
 }
 build_cost=150
 upkeep=0
@@ -1326,6 +1327,7 @@ sound="b_city_hall"
 sound_alt="b_generic"
 reqs={"type","name","range"
 "Tech","Steel","Player"
+"TerrainClass","Oceanic","Adjacent"
 }
 build_cost=50
 upkeep=2
@@ -1342,6 +1344,7 @@ sound_alt="b_generic"
 reqs={"type","name","range"
 "Tech","Combustion","Player"
 "Building","Small Shipyard","City"
+"TerrainClass","Oceanic","Adjacent"
 }
 build_cost=50
 upkeep=2
@@ -1359,6 +1362,7 @@ reqs={"type","name","range"
 "Tech","Mass Production","Player"
 "Building","Small Shipyard","City"
 "Building","Medium Shipyard","City"
+"TerrainClass","Oceanic","Adjacent"
 }
 build_cost=50
 upkeep=2
@@ -1435,13 +1439,14 @@ graphic_alt="b.port_facility"
 sound="b_city_hall"
 sound_alt="b_generic"
 reqs={"type","name","range","present"
-"Tech","Map Making","Player",TRUE
+"Tech","Seafaring","Player",TRUE
 "Tech","Advanced Navigation","Player",FALSE
+"TerrainClass","Oceanic","Adjacent",TRUE
 }
 build_cost=10
 upkeep=0
 sabotage=100
-helptext="Wooden dock is a small structure necessary to build wooden ships: Trireme and Caravel."
+helptext="Wooden dock is a small structure necessary to build wooden ships: Caravel."
 
 [building_91]
 name=_("Royal Shipyard")
@@ -1452,6 +1457,7 @@ sound="b_city_hall"
 sound_alt="b_generic"
 reqs={"type","name","range"
 "Tech","Advanced Navigation","Player"
+"TerrainClass","Oceanic","Adjacent"
 }
 build_cost=40
 upkeep=0
@@ -1467,6 +1473,7 @@ sound="b_city_hall"
 sound_alt="b_generic"
 reqs={"type","name","range"
 "Tech","Refining","World"
+"Extra","Oil","City"
 }
 build_cost=200
 upkeep=0
@@ -1499,7 +1506,7 @@ graphic_alt="b.police_station"
 sound="b_city_hall"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Tech","Medicine","Player"
+"Tech","Industrialization","Player"
 }
 build_cost=80
 upkeep=4
@@ -1681,10 +1688,10 @@ sound_alt="b_generic"
 reqs={"type","name","range"
 "Gov","Tribal","Player"
 }
-build_cost=5
+build_cost=2
 upkeep=0
 sabotage=100
-helptext="When the tribe has no immediate threats or things to do, they focus all their efforts to food production. Working on an additional field converts all production to food:* 1 Food if city is size 1 or 2* 2 Food if city is size 3 or moreAfter the nation moves to a more advanced government, the Extra Field cannot be obtained because all additional land belongs to the monarch. The fields already in action remain, though."
+helptext="When the tribe has no immediate threats or things to do, or is in danger of running out of food, they focus all their efforts to food production. Working on an additional field converts all production to extra food:", "Extra Field gives food on the central city tle.", "If the city is size 3 or more, Extra Field gives one more food. ", "After the nation moves to a more advanced government, the Extra Field cannot be obtained because all additional land belongs to the monarch. The fields already in action remain, though."
 
 [building_local_council_I]
 name=_("Local Council I")
@@ -1699,7 +1706,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_II]
 name=_("Local Council II")
@@ -1715,7 +1722,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_III]
 name=_("Local Council III")
@@ -1731,7 +1738,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_IV]
 name=_("Local Council IV")
@@ -1747,7 +1754,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_V]
 name=_("Local Council V")
@@ -1763,7 +1770,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_VI]
 name=_("Local Council VI")
@@ -1779,7 +1786,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_VII]
 name=_("Local Council VII")
@@ -1795,7 +1802,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_VIII]
 name=_("Local Council VIII")
@@ -1811,7 +1818,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_IX]
 name=_("Local Council IX")
@@ -1827,7 +1834,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_X]
 name=_("Local Council X")
@@ -1843,7 +1850,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_XI]
 name=_("Local Council XI")
@@ -1859,7 +1866,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_XII]
 name=_("Local Council XII")
@@ -1875,5 +1882,21 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+
+[building_military_academy]
+name=_("Military Academy")
+genus="SmallWonder"
+graphic="b.military_academy"
+graphic_alt="b.barracks"
+sound="b_barracks"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech", "Tactics", "Player"
+"Building", "Barracks II", "City"
+}
+build_cost=120
+upkeep=0
+sabotage=100
+helptext="Military academy allows the city to train Commando units.", "In order to build it, a city must have Barracks II."
 
