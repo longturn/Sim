@@ -37,6 +37,15 @@ flags={"name","helptxt"
 "Bombarder",""
 "Nuclear",""
 "Cant_Fortify",""
+"x5hp",""
+"x10hp",""
+"x15hp",""
+"x20hp",""
+"x30hp",""
+"Mechanic",""
+"Ancient Siege Equipment",""
+"Arty",""
+
 }
 class_flags={"name","helptxt"
 "LightWeight","Airliftable once you learn Flight."
@@ -127,7 +136,7 @@ flags="Unreachable","DoesntOccupyTile"
 name=_("?unitclass:Land")
 min_speed=1
 hp_loss_pct=0
-flags="TerrainSpeed","TerrainDefense","CanOccupyCity","BuildAnywhere","CollectRansom","ZOC","CanFortify"
+flags="TerrainSpeed","TerrainDefense","CanOccupyCity","BuildAnywhere","CollectRansom","ZOC","CanPillage","CanFortify"
 
 [unitclass_2]
 name=_("?unitclass:Raiders")
@@ -138,7 +147,7 @@ flags="TerrainSpeed","TerrainDefense","CanOccupyCity","BuildAnywhere","CollectRa
 [unitclass_tribe]
 name=_("?unitclass:Tribe")
 min_speed=1
-hp_loss_pct=30
+hp_loss_pct=20
 flags="TerrainSpeed","TerrainDefense","BuildAnywhere","CollectRansom","ZOC","DoesntOccupyTile","Airliftable"
 
 [unitclass_3]
@@ -451,7 +460,7 @@ sound_move_alt="m_generic"
 sound_fight="f_settlers"
 sound_fight_alt="f_generic"
 build_cost=5
-pop_cost=0
+pop_cost=1
 attack=0
 defense=1
 move_rate=2
@@ -470,7 +479,7 @@ veteran_work_raise_chance=0
 veteran_move_bonus=0
 flags="HasNoZOC","NonMil","IgTer","Settlers","Cities"
 roles="CitiesStartunit","Settlers"
-helptext="In the early stages of civilization, expansion was a constant. People simply moved from one place to another and settled in new locations, carrying only basic stuff, because that was all they had. ","Tribe is a predecessor of Settlers and is used for founding new cities. Tribe can also perform the same terrain alterations as Workers."
+helptext="In the early stages of civilization, expansion was a constant. People simply moved from one place to another and settled in new locations, carrying only basic stuff, because that was all they had. ","","Tribe is a predecessor of Settlers and is used for founding new cities. Tribe can also perform the same terrain alterations as Workers. Unlike Settlers, building a Tribe unit does NOT cost population points!","","Due to food scarcity, a Tribe cannot travel far without settling (building a settlement) unless it stops in an already existing village where locals will provide the travellers with basic necessities. If they travel too far without resupplying, tribespeople are in danger of perishing."
 
 [unit_1]
 name=_("Settlers")
@@ -541,7 +550,7 @@ helptext="Migrants can be used to transfer population to other cities, but may n
 [unit_3]
 name=_("Workers")
 class="Small Land"
-tech_req="None"
+tech_req="Tools"
 obsolete_by="Engineers"
 graphic="u.worker"
 graphic_alt="u.engineers"
@@ -604,12 +613,12 @@ sound_fight="f_warriors"
 sound_fight_alt="f_generic"
 build_cost=5
 pop_cost=0
-attack=2
-defense=2
+attack=4
+defense=3
 move_rate=2
 vision_radius_sq=2
 transport_cap=0
-hitpoints=10
+hitpoints=5
 firepower=1
 fuel=0
 uk_happy=0
@@ -641,7 +650,7 @@ firepower=1
 fuel=0
 uk_happy=1
 uk_food=1
-flags="Capturer","Marines"
+flags="Capturer","Marines", "x10hp"
 roles="DefendOk"
 helptext="This is the weakest offensive unit. It is the default unit except in Tribalism, where it is replaced by Tribal-only Raiders. Both Raiders and Warriors are obsoleted by Militia."
 
@@ -669,13 +678,13 @@ uk_happy=1
 uk_food=1
 uk_shield=1
 uk_gold=1
-flags="Capturer"
+flags="Capturer", "x10hp"
 roles="FirstBuild","DefendGood"
 helptext="The Phalanx is armored infantry, suitable for defending your cities.\\Phalanx can't be built under Tribal government due to high level of discipline and organization it requires. As technology and society progresses, it is replaced by Arquebusiers."
 
 [unit_8]
 name=_("Bowmen")
-class="Land"
+class="Raiders"
 tech_req="None"
 gov_req="Tribal"
 obsolete_by="Skirmishers"
@@ -698,7 +707,7 @@ fuel=0
 uk_happy=0
 uk_food=1
 uk_shield=1
-bombard_rate=2
+bombard_rate=1
 flags="Shield2Gold","Capturer","Marines","Bombarder"
 helptext="Bowmen can be built only under Tribal government. They fight with bows and arrows from a distance and do not engage the enemy directly. This is why they do not suffer damage when attacking, but can not destroy an enemy unit, only damage it. They are more vulnerable than other units when defending. "
 
@@ -753,7 +762,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=2
-flags="Capturer"
+flags="Capturer", "x10hp"
 roles="DefendOk","BarbarianBuild","BarbarianSea"
 helptext="Swordsmen are heavily armed and well disciplined infantry units with an excellent offensive value."
 
@@ -781,14 +790,14 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=3
-flags="Capturer"
+flags="Capturer", "x10hp"
 roles="DefendOk","BarbarianBuild","BarbarianSea"
 helptext="Legion is an advanced attack unit used in intense warfare. \\It can only be built in a city that contains Barracks."
 
 [unit_12]
 name=_("Pikemen")
 class="Land"
-tech_req="Feudalism"
+tech_req="Pikes"
 obsolete_by="Arquebusiers"
 graphic="u.pikemen"
 sound_move="m_pikemen"
@@ -808,7 +817,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=2
-flags="Capturer"
+flags="Capturer", "x10hp"
 roles="FirstBuild","DefendGood"
 helptext="Equipped with long pikes, Pikemen replaces Phalanx as the preferred defender."
 
@@ -816,6 +825,7 @@ helptext="Equipped with long pikes, Pikemen replaces Phalanx as the preferred de
 name=_("Militia")
 class="Land"
 tech_req="Gunpowder"
+obsolete_by="Homeguard"
 graphic="u.militia"
 graphic_alt="u.musketeers"
 sound_move="m_musketeers"
@@ -835,9 +845,9 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=1
-flags="Capturer","Marines"
+flags="Capturer","Marines", "x10hp"
 roles="FirstBuild","HutTech","DefendGood","BarbarianTech","BarbarianBuildTech","BarbarianSeaTech"
-helptext="Militia is the first unit equipped with Gunpowder technology, but represents hastily and not too well organised units consisting of citizens and requires no gold upkeep. Best used in case of emergency. "
+helptext="Militia is the first unit equipped with Gunpowder technology, but represents hastily and not too well organised units consisting of citizens. Best used in case of emergency. "
 
 [unit_14]
 name=_("Arquebusiers")
@@ -852,8 +862,8 @@ sound_fight="f_musketeers"
 sound_fight_alt="f_generic"
 build_cost=10
 pop_cost=0
-attack=3
-defense=3
+attack=4
+defense=4
 move_rate=2
 vision_radius_sq=2
 transport_cap=0
@@ -863,7 +873,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=3
-flags="Capturer"
+flags="Capturer", "x10hp"
 roles="FirstBuild","HutTech","DefendGood","BarbarianTech","BarbarianBuildTech","BarbarianSeaTech"
 helptext="This is the first well-trained and professional military unit using gunpowder technology."
 
@@ -890,7 +900,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=5
-flags="Capturer"
+flags="Capturer", "x15hp"
 roles="FirstBuild","HutTech","DefendGood","BarbarianTech","BarbarianBuildTech","BarbarianSeaTech"
 helptext="Musketeers are an elite force equipped with early firearms."
 
@@ -939,13 +949,13 @@ defense=5
 move_rate=2
 vision_radius_sq=2
 transport_cap=0
-hitpoints=15
+hitpoints=20
 firepower=1
 fuel=0
 uk_happy=1
 uk_food=1
-uk_gold=6
-flags="Capturer"
+uk_gold=4
+flags="Capturer", "x20hp"
 roles="FirstBuild","DefendGood"
 helptext="Riflemen are World War-era infantry, very good at defending your cities."
 
@@ -953,12 +963,13 @@ helptext="Riflemen are World War-era infantry, very good at defending your citie
 name=_("Commandos")
 class="Land"
 tech_req="Tactics"
+impr_req="Military Academy"
 graphic="u.alpine_troops"
 sound_move="m_alpine_troops"
 sound_move_alt="m_generic"
 sound_fight="f_alpine_troops"
 sound_fight_alt="f_generic"
-build_cost=30
+build_cost=40
 pop_cost=0
 attack=7
 defense=8
@@ -972,8 +983,8 @@ firepower=1
 fuel=0
 uk_happy=1
 uk_food=1
-uk_gold=8
-flags="IgTer","IgWall","Capturer"
+uk_gold=12
+flags="IgTer","IgWall","Capturer", "x20hp", "Marines"
 roles="DefendOk"
 helptext="Commandos are highly mobile units as well as excellent defenders."
 
@@ -997,13 +1008,13 @@ transport_cap=0
 embarks="Helicopter"
 disembarks="Helicopter"
 vision_layer="Stealth"
-hitpoints=10
+hitpoints=15
 firepower=1
 fuel=0
 uk_happy=0
 uk_gold=1
-flags="Capturer","Marines"
-helptext="Homeguard, or territorial guard, or state guard, are home defense low-cost units whose role is to provide token defense for large parts of territory or slow rapid advance of the enemy. If well fortified on favourable terrain, they may put up a fight, but willl not be too efficient against a professional elite attack force."
+flags="Capturer","Marines", "x15hp"
+helptext="Homeguard, or territorial guard, or state guard, are low-cost home defense units whose role is to provide token defense for large parts of territory or slow down rapid advance of the enemy. If well fortified on favourable terrain, they may put up a fight, but willl not be too efficient against a professional attack force."
 
 [unit_19]
 name=_("Partisan")
@@ -1030,7 +1041,7 @@ fuel=0
 uk_happy=0
 uk_gold=1
 bombard_rate=5
-flags="IgZOC","IgTer","Capturer","Marines","Bombarder"
+flags="IgZOC","IgTer","Capturer","Marines","Bombarder", "x20hp"
 roles="Partisan","DefendGood","BarbarianTech"
 helptext="Partisans are guerilla fighters who are experts at using the terrain to their advantage.","A number of Partisans are granted free when an enemy conquers your city -- they automatically assume defensive positions in the surrounding countryside -- but only under these conditions:\n - Guerilla Warfare must be known by at least one player.\n - At least three quarters of the citizens must have your nationality.\n - You must know about Communism and Gunpowder.\n - You must run either a Democracy or a Communist government."
 
@@ -1059,7 +1070,7 @@ fuel=0
 uk_happy=0
 uk_food=1
 uk_gold=1
-flags="Fanatic","Capturer"
+flags="Fanatic","Capturer", "x15hp"
 roles="DefendGood"
 helptext="Fanatics are warriors extremely devoted to a higher cause.","Fundamentalist nations can maintain Fanatic units without having to pay any upkeep nor causing military unhappiness.  Instead, each unit reduces the population by 1."
 
@@ -1087,7 +1098,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=10
-flags="Capturer","Marines"
+flags="Capturer","Marines", "x15hp"
 roles="FirstBuild","DefendGood","BarbarianSeaTech"
 helptext="Naval infantry can attack land targets and conquer cities from ships."
 
@@ -1116,7 +1127,7 @@ uk_happy=1
 uk_food=1
 uk_gold=10
 paratroopers_range=10
-flags="IgZOC","IgWall","Capturer","Paratroopers"
+flags="IgZOC","IgWall","Capturer","Paratroopers", "x20hp"
 roles="DefendOk"
 helptext="Paratroopers are experts at airborne attacks. From a friendly city or airbase, Paratroopers who have not expended any movement points can paradrop directly to any tile in range, and be immediately ready to act there. (Beware dropping into unseen territory, as Paratroopers landing on a tile occupied by enemy units are easy targets!)"
 
@@ -1131,12 +1142,12 @@ sound_fight="f_mech_inf"
 sound_fight_alt="f_generic"
 build_cost=40
 pop_cost=0
-attack=5
-defense=8
+attack=3
+defense=5
 move_rate=6
 vision_radius_sq=2
 transport_cap=0
-hitpoints=20
+hitpoints=30
 firepower=1
 fuel=0
 uk_happy=1
@@ -1144,6 +1155,7 @@ uk_food=1
 uk_shield=1
 uk_gold=12
 roles="FirstBuild","DefendGood"
+flags= "x30hp", "Capturer", "Mechanic"
 helptext="The Mechanized Infantry has the strongest inherent defensive strength of any land unit, and is very fast on roads and easy terrain, but it is hindered rather than helped by rough terrain (it cannot move into mountains, swamps, or jungles), and it is only available near the end of the technology tree."
 
 [unit_24]
@@ -1169,7 +1181,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=1
-flags="Fast","Capturer"
+flags="Fast","Capturer", "x10hp"
 roles="Hut","Barbarian","AttackFastStartunit","Hunter"
 helptext="Horsemen are mounted warriors and an early shock-troop that can penetrate deep into enemy territory.\\Fast units suffer penalties when attacking tiles with cover (cities, forests...) "
 
@@ -1196,9 +1208,9 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=2
-flags="Fast","Capturer"
+flags="Fast","Capturer", "x10hp"
 roles="AttackFastStartunit"
-helptext="Chariots are fast units with strong attack and very weak defence.   \\This unit can only be built if there are Barracks I present in the city. \\Fast units suffer penalties when attacking tiles with cover (cities, forests...) "
+helptext="Chariots are fast units with strong attack and no defence. They can only be built if there are Barracks I present in the city. Fast units suffer penalties when attacking non-flat and non-open terrain(cities, forests...) "
 
 [unit_26]
 name=_("Elephants")
@@ -1223,7 +1235,7 @@ fuel=0
 uk_happy=1
 uk_food=2
 uk_gold=3
-flags="Fast","Capturer"
+flags="Fast","Capturer", "x20hp"
 roles="DefendOk","AttackFastStartunit","Hunter"
 helptext="Elephants are towering animals trained for war that are often used as powerful shock troops. They are also very good defenders. However, they are not as fast as other mounted units and also require more food. Obviously. \\Fast units suffer penalties when attacking tiles with cover (cities, forests...) "
 
@@ -1250,7 +1262,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=4
-flags="Fast","Capturer"
+flags="Fast","Capturer", "x10hp"
 roles="HutTech","DefendOk","BarbarianTech","BarbarianBuildTech","AttackFastStartunit","Hunter"
 helptext="Knights are mounted and heavily armored warriors.\\Fast units suffer penalties when attacking tiles with cover (cities, forests...) "
 
@@ -1277,7 +1289,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=5
-flags="Fast","Capturer"
+flags="Fast","Capturer", "x10hp"
 roles="BarbarianBuildTech","AttackFastStartunit","Hunter"
 helptext="Dragoons are mounted warriors carrying early firearms.\\Fast units suffer penalties when attacking tiles with cover (cities, forests...) "
 
@@ -1303,7 +1315,7 @@ fuel=0
 uk_happy=1
 uk_food=1
 uk_gold=7
-flags="Fast","Capturer"
+flags="Fast","Capturer", "x10hp"
 roles="AttackFastStartunit","Hunter"
 helptext="Cavalry are mounted and highly trained soldiers.\\Fast units suffer penalties when attacking tiles with cover (cities, forests...) "
 
@@ -1330,9 +1342,9 @@ uk_happy=1
 uk_food=1
 uk_shield=2
 uk_gold=10
-flags="Fast"
+flags="Fast", "x30hp", "Mechanic"
 roles="DefendOk","AttackFastStartunit","Hunter"
-helptext="Armors are motorized war wagons that are faster, stronger, and can take more damage than any unit. However, they are less successful when attacking rough or covered terrain like cities, hills, mountains, forest and jungle. "
+helptext="Armors are motorized war wagons that are faster, stronger, and can take more damage. However, they are less successful when attacking rough or covered terrain like cities, hills, mountains, forest and jungle. "
 
 [unit_31]
 name=_("Catapult")
@@ -1359,7 +1371,7 @@ uk_food=1
 uk_shield=1
 uk_gold=5
 bombard_rate=9
-flags="Capturable","Bombarder"
+flags="Capturable","Bombarder", "Ancient Siege Equipment"
 roles="AttackStrongStartunit"
 helptext="Catapults belong in the artillery class: they suffer no damage when attacking and damage all units on the attacked tile, but can only weaken enemy units, not destroy them. They attack 9 times during a single attack. ","While powerful, Catapults (and their successors) are bulky and awkward; they require roads to move in rough terrain (mountains, swamps, and jungles), are difficult to defend, and are too big for early ships (Triremes and Caravels)."
 
@@ -1417,7 +1429,7 @@ uk_food=1
 uk_shield=2
 uk_gold=12
 bombard_rate=12
-flags="Capturable","Bombarder"
+flags="Capturable","Bombarder", "Arty"
 roles="AttackStrongStartunit"
 helptext="The artillery is an upgraded cannon. As with its predecessors, it belongs in the artillery class: they suffer no damage when attacking and damage all units on the attacked tile, but can only weaken enemy units, not destroy them. They attack 12 times during a single attack. "
 
@@ -1445,7 +1457,7 @@ uk_food=1
 uk_shield=2
 uk_gold=15
 bombard_rate=12
-flags="Bombarder"
+flags="Bombarder", "Arty"
 roles="AttackStrongStartunit"
 helptext="Howitzers are upgraded artillery with improved defensive as well as offensive capabilities. However, they still have the limited mobility of their predecessors."
 
@@ -1522,7 +1534,7 @@ pop_cost=0
 attack=3
 defense=8
 move_rate=20
-vision_radius_sq=1
+vision_radius_sq=8
 transport_cap=2
 cargo="Missile"
 hitpoints=10
@@ -1560,7 +1572,7 @@ uk_happy=1
 uk_food=1
 uk_shield=3
 uk_gold=6
-flags="AirAttacker","Unbribable"
+flags="AirAttacker","Unbribable", "x10hp"
 helptext="Helicopters can transport one unit of infantry; while most troops must load or unload in a city or airbase units specializing in mobility (Paratroopers, Commandos, Marines, Partisans, and Fanatics) can embark or disembark at any time.","Care must be exercised, because Helicopters lose a small amount of health for every turn not spent in a city or airbase or on a Carrier."
 
 [unit_39]
@@ -1639,7 +1651,7 @@ defense=0
 move_rate=4
 vision_radius_sq=2
 transport_cap=1
-cargo="Land","Raiders","Small Land","Non Military","Merchant"
+cargo="Tribe","Land","Raiders","Small Land","Non Military","Merchant"
 hitpoints=5
 firepower=1
 fuel=0
@@ -1651,9 +1663,8 @@ helptext=""
 [unit_42]
 name=_("Trireme")
 class="Trireme"
-tech_req="Map Making"
+tech_req="Seafaring"
 gov_req="Monarchy"
-impr_req="Wooden Dock"
 graphic="u.trireme"
 sound_move="m_trireme"
 sound_move_alt="m_generic"
@@ -1666,7 +1677,7 @@ defense=2
 move_rate=6
 vision_radius_sq=5
 transport_cap=2
-cargo="Land","Raiders","Small Land","Non Military","Merchant"
+cargo="Tribe","Land","Raiders","Small Land","Non Military","Merchant"
 hitpoints=10
 firepower=1
 fuel=0
@@ -1695,7 +1706,7 @@ defense=2
 move_rate=6
 vision_radius_sq=2
 transport_cap=3
-cargo="Land","Raiders","Small Land","Non Military","Merchant"
+cargo="Tribe","Land","Raiders","Small Land","Non Military","Merchant"
 hitpoints=10
 firepower=1
 fuel=0
@@ -1724,7 +1735,7 @@ defense=2
 move_rate=8
 vision_radius_sq=2
 transport_cap=4
-cargo="Land","Raiders","Small Land","Non Military","Big Land","Merchant"
+cargo="Tribe","Land","Raiders","Small Land","Non Military","Big Land","Merchant"
 hitpoints=20
 firepower=1
 fuel=0
@@ -1986,7 +1997,7 @@ defense=3
 move_rate=8
 vision_radius_sq=8
 transport_cap=8
-cargo="Land","Raiders","Small Land","Non Military","Big Land","Merchant"
+cargo="Tribe","Land","Raiders","Small Land","Non Military","Big Land","Merchant"
 hitpoints=10
 firepower=1
 fuel=0
@@ -2058,7 +2069,7 @@ veteran_base_raise_chance=0
 veteran_work_raise_chance=0
 veteran_move_bonus=0
 flags="OneAttack","FieldUnit","Unique","AirAttacker","Nuclear"
-helptext="Fat Man is a unique unit which means you can only have one at a time. You can build it when:* Manhattan Projects exists* you have built Trinity Project\\On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water) Transports can clean up nuclear fallout."
+helptext="Little Boy is a unique unit which means you can only have one at a time. You can build it when:* Manhattan Projects exists* you have built Trinity Project\\On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water) Transports can clean up nuclear fallout."
 
 [unit_56]
 name=_("Fat Man")
@@ -2123,7 +2134,7 @@ veteran_base_raise_chance=0
 veteran_work_raise_chance=0
 veteran_move_bonus=0
 flags="OneAttack","FieldUnit","NoHome","AirAttacker","Nuclear"
-helptext="Fat Man is a unique unit which means you can only have one at a time. You can build it when:* Manhattan Projects exists* you have built Trinity Project\\On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain  across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water). Transports can clean up nuclear fallout."
+helptext="Atom bomb is a mass produced nuclear weapon.", "On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain  across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water). Transports can clean up nuclear fallout."
 
 [unit_58]
 name=_("ICBM")
@@ -2147,7 +2158,6 @@ disembarks="Air"
 hitpoints=10
 firepower=1
 fuel=1
-vision_layer="Stealth"
 uk_happy=1
 uk_shield=1
 uk_gold=5
@@ -2158,7 +2168,7 @@ veteran_work_raise_chance=0
 veteran_move_bonus=0
 paratroopers_range=999
 flags="OneAttack","FieldUnit","NoHome","AirAttacker","Paratroopers","Nuclear"
-helptext="This is the ultimate weapon. The only problem is, if you use it, you better make sure the enemy doesn't have it, too. You can try and destroy all of them, bu good luck with that. ICBMs are invisible and can be launched from any location.", " On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain  across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water). Transports can clean up nuclear fallout."
+helptext="ICBM is a self-propelled nuclear weapon.", "On impact, the blast will destroy any unit in an area 3 tiles wide (3x3 squares for rectangular grids), including friendly units. Any city within the blast area loses half its population, and land tiles within the blast area are subject to nuclear fallout.","Similar to pollution and global warming, the risk of global nuclear winter increases with fallout. If nuclear winter occurs, terrain  across the globe changes into desert, tundra, and ice. Settlers, Migrants, Workers, and Engineers and (for fallout on water). Transports can clean up nuclear fallout."
 
 [unit_59]
 name=_("Nuclear")
@@ -2222,30 +2232,6 @@ flags="HasNoZOC","IgZOC","NonMil","Diplomat"
 roles="DiplomatStartunit"
 helptext="A Diplomat is an official that carries your dispatches and is authorized to deal with foreign dignitaries. He may also undertake various covert operations with the intent of harming your opponents; Diplomats in your own cities defend them against such actions.","Many covert actions may be attempted even in peacetime, but the more aggressive actions will be discovered and cause diplomatic incidents, giving an excuse for the breaking of treaties by a Federation or Democracy, or a nuclear-armed regime otherwise restrained by the United Nations.","If a foreign unit is alone on a tile, you may attempt to bribe it with your Diplomat. By paying a sum of gold the unit will immediately become yours; the exact sum depends on the status of the unit and that of the civilization owning it. However, units belonging to Republican or Democratic governments cannot be bribed. Bribery when not at war will cause a diplomatic incident.","Diplomats can also perform a number of actions in another player's city, although each Diplomat may attempt only one action. Most of these actions have a chance of failure. Also, any enemy Diplomats or Spies in the city will oppose hostile actions; in this case, either your unit or the defending unit will die. If the defending unit dies, you lose one movement point and may try again.","The actions available to Diplomats in a city are:"," - \"Establish Embassy\": This action always succeeds, and gives permanent contact with the city's owner, as well as intelligence on their tax rates and technology. Each player you have an embassy with that knows a technology reduces that technology's research cost to you."," - \"Investigate City\": Your unit attempts to report detailed information about the city: its status, what buildings and units are within, and what it is currently producing."," - \"Sabotage City\": Your unit attempts either to disrupt all the city's work so far towards its current project, or to destroy an existing building in the city, at random. Once built, Palaces and Wonders cannot be sabotaged, and attempts to sabotage City Walls or any building in a capital each halve the chance of success. Sabotage may only be attempted when openly at war."," - \"Steal Technology\": Your unit attempts to learn the secrets of a random technology known to the city's owner but not to you. Technology may only be stolen once from a given enemy city by Diplomats. This action may be attempted even when not at war, but will cause a diplomatic incident."," - \"Incite a Revolt\": In return for gold a foreign city will change allegiance and join your empire, bringing along all nearby units that call it home, but reducing its size by 1. Units in other cities remain in the enemy's control, but units outside cities are lost to both players. The exact sum depends on the status of the city and that of the civilization that owns it. It is not possible to incite a rebellion in a capital, or in any city governed by a Federation or Democracy. Incitement may be attempted in peacetime, but will cause a diplomatic incident.","In some game strategies, hordes of Diplomats can be used to wreak havoc on the enemy.  Little wonder that Diplomats are often viewed with suspicion and fear!","Diplomats built under Communist or Federation governments will start at the first veteran level (secretary)."
 
-[unit_liaison]
-name=_("Military Liaison")
-class="Non Military"
-tech_req="Code of Laws"
-graphic="u.liaison"
-graphic_alt="u.diplomat"
-sound_move="m_diplomat"
-sound_move_alt="m_generic"
-sound_fight="f_diplomat"
-sound_fight_alt="f_generic"
-build_cost=5
-pop_cost=0
-attack=0
-defense=0
-move_rate=4
-vision_radius_sq=2
-transport_cap=0
-hitpoints=1
-firepower=1
-fuel=0
-uk_happy=0
-uk_gold=1
-flags="NonMil", "NoVeteran"
-helptext="A Military Liaison's purpose is to serve as a liaison between your nation and your allies. His role is to take over units that your allies are transferring to your control. To transfer a unit under your control, use the 'bribe' action."
 
 [unit_64]
 name=_("Spy")
