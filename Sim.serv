@@ -1,7 +1,7 @@
 # [effect_free_techs] needs to be updated from effects.ruleset to correspond the number of the players in a game
 # the value defines how many players need to invent a tech before it's given free to everyone. currently set to 18
 
-rulesetdir Sim06
+rulesetdir Sim
 
 # ruleset test settings ------------------------------
 # set fogofwar "DISABLED"
