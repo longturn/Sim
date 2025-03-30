@@ -35,12 +35,13 @@ tech_loss_allow_holes=FALSE
 upgrade_veteran_loss=1
 autoupgrade_veteran_loss=1
 granary_food_ini=10,12,14,16,20,25,30,35,40
-min_city_center_food=1
+min_city_center_food=0
 min_city_center_shield=1
 min_city_center_trade=1
 init_vis_radius_sq=4
 init_city_radius_sq=1
 gold_upkeep_style="Nation"
+food_cost = 2
 
 [illness]
 illness_on=TRUE
@@ -315,19 +316,6 @@ target_reqs={"type","name","range","present"
 "MaxUnitsOnTile","1","Local",TRUE
 }
 
-[actionenabler_gift_unit]
-action="Bribe Unit"
-actor_reqs={"type","name","range"
-"UnitType","Military Liaison","Local"
-"DiplRel","Alliance","Local"
-"MinMoveFrags","1","Local"
-"DiplRel","Foreign","Local"
-"UnitState","OnDomesticTile","Local"
-}
-target_reqs={"type","name","range"
-"MaxUnitsOnTile","1","Local"
-}
-
 [actionenabler_19]
 action="Sabotage Unit Escape"
 actor_reqs={"type","name","range"
@@ -530,17 +518,6 @@ target_reqs={"type","name","range","present"
 "CityTile","Claimed","Local",FALSE
 }
 
-[actionenabler_icbm_launch]
-action="Paradrop Unit"
-actor_reqs={"type","name","range","present"
-"UnitType","ICBM","Local",TRUE
-"UnitState","Transporting","Local",FALSE
-}
-target_reqs={"type","name","range","present"
-"CityTile","Claimed","Local",FALSE
-}
-
-
 [actionenabler_38]
 action="Airlift Unit"
 actor_reqs={"type","name","range","present"
@@ -720,7 +697,7 @@ target_reqs={"type","name","range","present"
 action="Build Mine"
 actor_reqs={"type","name","range"
 "UnitFlag","Settlers","Local"
-"Tech","Construction","Player"
+;"Tech","Construction","Player"
 }
 target_reqs={"type","name","range"
 "Terrain","Desert","Local"
@@ -845,6 +822,7 @@ only_killing_makes_veteran = TRUE
 
 [borders]
 radius_sq_city=0
+radius_sq_city_permanent=401
 
 [research]
 tech_cost_style="Classic+"
@@ -859,7 +837,7 @@ victory_min_points=18000
 victory_lead_pct=200
 
 [calendar]
-start_year=-2000
+start_year=-15000
 positive_label="CE"
 negative_label="BCE"
 
@@ -1162,7 +1140,7 @@ set=
 ;"razechance",10
 ;"restrictinfra",TRUE
 ;"revolentype","RANDQUICK"
-	"startunits","cccccwwwwAAA"
+	"startunits","ccccccc"
 ;"techlevel",1
 ;"techlossforgiveness",0
 ;"techlossrestore",50
