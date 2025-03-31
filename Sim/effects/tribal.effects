@@ -1,1 +1,253 @@
 
+[effect_15]
+type="City_Unhappy_Size"
+value=2
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+}
+
+[effect_52]
+type="Upkeep_Free"
+value=99
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+}
+
+
+[effect_62]
+type="Unit_Upkeep_Free_Per_City"
+value=99
+reqs={"type","name","range"
+"OutputType","gold","Local"
+"Gov","Tribal","Player"
+}
+
+[effect_73]
+type="Unit_Upkeep_Free_Per_City"
+value=2
+reqs={"type","name","range"
+"OutputType","shield","Local"
+"Gov","Tribal","Player"
+}
+
+[effect_74]
+type="Unit_Upkeep_Free_Per_City"
+value=2
+reqs={"type","name","range"
+"OutputType","Food","Local"
+"Gov","Tribal","Player"
+}
+
+[effect_107]
+type="Martial_Law_Each"
+value=2
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+}
+
+[effect_110]
+type="Martial_Law_Max"
+value=3
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+}
+
+[effect_114]
+type="Output_Penalty_Tile"
+value=2
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+}
+
+[effect_no_tribal_trade]
+type="Output_Bonus"
+value=-100
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+"OutputType","Trade","Local"
+}
+
+[effect_125]
+type="Output_Bonus"
+value=-100
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+"OutputType","gold","Local"
+}
+
+
+[effect_126]
+type="Output_Bonus"
+value=-100
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+"OutputType","Luxury","Local"
+}
+
+;[effect_469]
+;type="Output_Add_Tile"
+;value=1
+;reqs={"type","name","range"
+;"CityTile","Center","Local"
+;"OutputType","Food","Local"
+;"Gov","Tribal","Player"
+;}
+
+;[effect_470]
+;type="Output_Add_Tile"
+;value=1
+;reqs={"type","name","range"
+;"CityTile","Center","Local"
+;"OutputType","Food","Local"
+;"Building","Palace","City"
+;"Gov","Tribal","Player"
+;}
+
+[effect_471]
+type="Output_Add_Tile"
+value=1
+reqs={"type","name","range"
+"CityTile","Center","Local"
+"OutputType","Shield","Local"
+"Building","Palace","City"
+"Gov","Tribal","Player"
+}
+
+
+[effect_519]
+type="Shield2Gold_Factor"
+value=100
+reqs={"type","name","range","present"
+"Gov","Tribal","Player",FALSE
+"UnitType","Raiders","Local",TRUE
+}
+
+
+[effect_520]
+type="Shield2Gold_Factor"
+value=100
+reqs={"type","name","range","present"
+"Gov","Tribal","Player",FALSE
+"UnitType","Bowmen","Local",TRUE
+}
+
+;;;;;;;;;;;;;; EARLY BONUS ;;;;;;;;;;;;;;;;
+
+[effect_city_food_supply_age_1.0]
+type	= "Output_Add_Tile"
+value	= 2	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Food","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-12500", "World", FALSE
+    }
+
+[effect_city_food_supply_age_1.1]
+type	= "Output_Add_Tile"
+value	= 2	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Food","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-10000", "World", FALSE
+    }
+
+[effect_city_food_supply_age_1.2]
+type	= "Output_Add_Tile"
+value	= 2	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Food","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-7500", "World", FALSE
+    }
+
+[effect_city_food_supply_age_1.3]
+type	= "Output_Add_Tile"
+value	= 2	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Food","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-5000", "World", FALSE
+    }
+
+[effect_city_production_age_1.0]
+type	= "Output_Add_Tile"
+value	= 1	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Shield","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-12500", "World", FALSE
+    }
+
+[effect_city_production_age_1.1]
+type	= "Output_Add_Tile"
+value	= 1	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Shield","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-10000", "World", FALSE
+    }
+
+
+[effect_city_production_age_1.2]
+type	= "Output_Add_Tile"
+value	= 1	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Shield","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-7500", "World", FALSE
+    }
+
+[effect_city_production_age_1.3]
+type	= "Output_Add_Tile"
+value	= 1	
+reqs	=
+    { "type", "name", "range", "present"
+      "Age", "1", "City", FALSE
+      "CityTile","Center","Local",TRUE
+      "OutputType","Shield","Local", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "MinYear", "-5000", "World", FALSE
+    }
+
+
+[effect_tribal_city_centre]
+type="Output_Per_Tile"
+value=-100
+reqs={"type","name","range", "present"
+"Age", "1", "City",TRUE
+"Gov","Tribal","Player",TRUE
+"OutputType","Food","Local",TRUE
+"CityTile","Center","Local",TRUE
+}
+
+[effect_food_outside_city]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    = 
+        { "type", "name", "range", "present"
+	  "Citytile", "Center", "Local", FALSE
+	  "OutputType", "Food", "Local", TRUE
+	  "Gov", "Tribal", "Player", TRUE
+	}
+
