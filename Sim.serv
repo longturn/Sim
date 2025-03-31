@@ -53,14 +53,15 @@ set foggedborders enabled
 set rapturedelay 3
 set restrictinfra enabled
 set revolen 1
-set victories ""
+set victories SPACERACE
 set endspaceship disabled
 set unreachableprotects disabled
 set killunhomed 0
 set airliftingstyle FROM_ALLIES|TO_ALLIES
 set razechance 90
-set happyborders ALLIED
+set happyborders DISABLED
 set occupychance 0
+set startunits "ccccccxxx"
 
 set migration enabled
 set endturn 5000
@@ -80,7 +81,7 @@ set team_pooled_research disabled
 set techlevel 0
 set contactturns 1
 set savepalace disabled
-set techlossforgiveness -1
+set techlossforgiveness 10
 set techlossrestore 50
 
 # technical
