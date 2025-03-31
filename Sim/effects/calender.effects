@@ -1,1 +1,119 @@
 
+
+; start at -15,000
+
+[effect_calendar_base]
+type    = "Turn_Years"
+value   = 500
+
+; T20 = 5000 BC
+
+; 500 - 300 = 200 
+[effect_calendar_1]
+type    = "Turn_Years"
+value   = -300
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "-5000", "World"
+    }
+
+; T40 = 1000 BC
+
+; 200 - 150 = 50 
+[effect_calendar_2]
+type    = "Turn_Years"
+value   = -150
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "-1000", "World"
+    }
+
+; T60 = 0 AD
+
+; 50 - 25 = 25 
+[effect_calendar_3]
+type    = "Turn_Years"
+value   = -25
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "0", "World"
+    }
+
+; T100 = 1000 AD
+
+; 25 - 5 = 20 
+[effect_calendar_4]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1000", "World"
+    }
+
+; T120 = 1400 AD
+
+; 20 - 5 = 15 
+[effect_calendar_5]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1400", "World"
+    }
+
+; T140 = 1700 AD
+
+; 15 - 5 = 10 
+[effect_calendar_6]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1700", "World"
+    }
+
+; T155 = 1850 AD
+
+; 10 - 5 = 5 
+[effect_calendar_7]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1850", "World"
+    }
+
+; T165 = 1900 AD
+
+; 5 - 2 = 3 
+[effect_calendar_8]
+type    = "Turn_Years"
+value   = -2
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1900", "World"
+    }
+
+; T175 = 1930 AD
+
+; 3 - 1 = 2 
+[effect_calendar_9]
+type    = "Turn_Years"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1930", "World"
+    }
+
+; T180 = 1940 AD
+
+
+; 2 - 1 = 1 
+[effect_calendar_10]
+type    = "Turn_Years"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1940", "World"
+    }
+
