@@ -251,3 +251,40 @@ reqs    =
 	  "Gov", "Tribal", "Player", TRUE
 	}
 
+;;;;;;;;;;;;;;;;;;; GRANARY SIZES ;;;;;;;;;;;;;;;;;;;;;;;;
+
+[effect_tribalgrowth_1_2]
+type="Growth_Food"
+value=67
+reqs={"type","name","range","present"
+"MinSize","1","City",TRUE
+"MinSize","2","City",FALSE
+"Gov","Tribal","Player",TRUE
+}
+
+[effect_tribalgrowth_2_3]
+type="Growth_Food"
+value=57
+reqs={"type","name","range","present"
+"MinSize","2","City",TRUE
+"MinSize","3","City",FALSE
+"Gov","Tribal","Player",TRUE
+}
+
+[effect_tribalgrowth_3_4]
+type="Growth_Food"
+value=50
+reqs={"type","name","range","present"
+"MinSize","3","City",TRUE
+"MinSize","4","City",FALSE
+"Gov","Tribal","Player",TRUE
+}
+
+[effect_tribalgrowth_4_5]
+type="Growth_Food"
+value=40
+reqs={"type","name","range","present"
+"MinSize","4","City",TRUE
+"MinSize","5","City",FALSE
+"Gov","Tribal","Player",TRUE
+}
