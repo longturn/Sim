@@ -1508,6 +1508,7 @@ value=17
 reqs={"type","name","range","present"
 "MinSize","1","City",TRUE
 "MinSize","2","City",FALSE
+"Gov","Tribal","Player",FALSE
 }
 
 [effect_170]
@@ -1516,6 +1517,7 @@ value=27
 reqs={"type","name","range","present"
 "MinSize","2","City",TRUE
 "MinSize","3","City",FALSE
+"Gov","Tribal","Player",FALSE
 }
 
 [effect_171]
@@ -1524,6 +1526,7 @@ value=34
 reqs={"type","name","range","present"
 "MinSize","3","City",TRUE
 "MinSize","4","City",FALSE
+"Gov","Tribal","Player",FALSE
 }
 
 [effect_172]
@@ -1533,6 +1536,7 @@ reqs={"type","name","range","present"
 "MinSize","4","City",TRUE
 "Building","Granary","City",TRUE
 "MinSize","5","City",FALSE
+"Gov","Tribal","Player",FALSE
 }
 
 [effect_173]
@@ -5133,6 +5137,10 @@ reqs	=
       "OutputType", "Science", "Local"
     }
 
+
+
+
+
 ;[effect_city_maintenance]
 ;type="Output_Add_Tile"
 ;value=-3
@@ -5140,6 +5148,8 @@ reqs	=
 ;"CityTile","Center","Local",TRUE
 ;"OutputType","Gold","Local",TRUE
 ;}
+
+
 
 ;[effect_probing_attack_raiders]
 ;type   = "Combat_Rounds"
