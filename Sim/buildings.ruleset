@@ -1694,6 +1694,20 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 ;sabotage=100
 ;helptext="When the tribe has no immediate threats or things to do, or is in danger of running out of food, they focus all their efforts to food production. Working on an additional field converts all production to extra food:", "Extra Field gives food on the central city tle.", "If the city is size 3 or more, Extra Field gives one more food. ", "After the nation moves to a more advanced government, the Extra Field cannot be obtained because all additional land belongs to the monarch. The fields already in action remain, though."
 
+[building_blacksmith]
+name = _("Blacksmith's Shop")
+genus = "Improvement"
+graphic = "b.blacksmith"
+graphic_alt = "b.factory"
+sound = "b_factory"
+sound_alt = "b_generic"
+reqs = {
+	"type","name","range"
+	"Tech", "Bronze Working", "Player"
+	"Extra", "Mine", "City"
+	}
+helptext = "Blacksmith's Shop has two purposes.", "One is to make it possible for the city to build more advanced military units such as Swordsmen and Legion.", "The second is to better utilise workers who are taken off the fields to boost production. With a blacksmith in the city, every worker produces three shields.", "Naturally, a blacksmith needs a steady supply of ore- no matter how little - to be able to work. This is why the city needs to have any kind of mine within its working radius."
+
 [building_local_council_I]
 name=_("Local Council I")
 genus="SmallWonder"
