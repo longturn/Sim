@@ -459,7 +459,7 @@ sound_move="m_settlers"
 sound_move_alt="m_generic"
 sound_fight="f_settlers"
 sound_fight_alt="f_generic"
-build_cost=5
+build_cost=1
 pop_cost=1
 attack=0
 defense=1
@@ -479,7 +479,7 @@ veteran_work_raise_chance=0
 veteran_move_bonus=0
 flags="HasNoZOC","NonMil","IgTer","Settlers","Cities"
 roles="CitiesStartunit","Settlers"
-helptext="In the early stages of civilization, expansion was a constant. People simply moved from one place to another and settled in new locations, carrying only basic stuff, because that was all they had. ","","Tribe is a predecessor of Settlers and is used for founding new cities. Tribe can also perform the same terrain alterations as Workers. Unlike Settlers, building a Tribe unit does NOT cost population points!","","Due to food scarcity, a Tribe cannot travel far without settling (building a settlement) unless it stops in an already existing village where locals will provide the travellers with basic necessities. If they travel too far without resupplying, tribespeople are in danger of perishing."
+helptext="In the early stages of civilization, expansion was a constant. People simply moved from one place to another and settled in new locations, carrying only basic stuff, because that was all they had. This is why it doesn't take much to 'produce' this unit.","","Tribe is a predecessor of Settlers and is used for founding new cities. Tribe can also perform the same terrain alterations as Workers.","","Due to food scarcity, a Tribe cannot travel far without settling (building a settlement) unless it stops in an already existing village where locals will provide the travellers with basic necessities. If they travel too far without resupplying, tribespeople are in danger of perishing."
 
 [unit_1]
 name=_("Settlers")
@@ -624,7 +624,7 @@ fuel=0
 uk_happy=0
 uk_food=1
 uk_shield=1
-flags="IgZOC","Shield2Gold","Marines"
+flags="IgZOC","Shield2Gold","Marines","Capturer"
 roles="FirstBuild","DefendGood","AttackStrongStartunit"
 helptext="This unit may be built from the start of the game.  It is the weakest offensive unit."
 
