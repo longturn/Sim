@@ -4376,13 +4376,13 @@ reqs={"type","name","range"
 "Building","Police 10th Precinct","City"
 }
 
-[effect_521]
-type="Output_Bonus"
-value=-100
-reqs={"type","name","range"
-"Building","Extra Field","City"
-"OutputType","shield","Local"
-}
+;[effect_521]
+;type="Output_Bonus"
+;value=-100
+;reqs={"type","name","range"
+;"Building","Extra Field","City"
+;"OutputType","shield","Local"
+;}
 
 
 [effect_524]
