@@ -78,6 +78,17 @@ reqs={"type","name","range","present"
 graphic="specialist.taxman"
 helptext="Taxmen can be employed after you build a marketplace in your city. Each tax collector produces extra gold for your treasury per turn, the amount depending on buildings present in the city and active wonders in your nation and the world. "
 
+[specialist_3]
+name=_("Workers")
+rule_name="Worker"
+short_name="W"
+reqs={"type","name","range","present"
+"Gov","Anarchy","Player",FALSE
+}
+graphic="specialist.worker"
+helptext="You may employ workers at any time you find it necessary. Some buildings, techs and governments will make them more efficient."
+
+
 [parameters]
 add_to_size_limit=99
 vision_reveal_tiles=TRUE
