@@ -1706,7 +1706,26 @@ reqs = {
 	"Tech", "Bronze Working", "Player"
 	"Extra", "Mine", "City"
 	}
-helptext = "Blacksmith's Shop has two purposes.", "One is to make it possible for the city to build more advanced military units such as Swordsmen and Legion.", "The second is to better utilise workers who are taken off the fields to boost production. With a blacksmith in the city, every worker produces three shields.", "Naturally, a blacksmith needs a steady supply of ore- no matter how little - to be able to work. This is why the city needs to have any kind of mine within its working radius."
+build_cost=20
+upkeep=1
+sabotage=100
+helptext = "Blacksmith's Shop has two purposes.", "One is to make it possible for the city to build more advanced military units such as Swordsmen and Legion.", "The second is to better utilise workers who are taken off the fields to boost production. With a Blacsmith's in the city, every worker produces three shields.", "Naturally, a blacksmith needs a steady supply of ore- no matter how little - to be able to work. This is why the city needs to have any kind of mine within its working radius."
+
+[building_workshop]
+name = _("Workshop")
+genus = "Improvement"
+graphic = "b.workshop"
+graphic_alt = "b.factory"
+sound = "b_factory"
+sound_alt = "b_generic"
+reqs = {
+	"type","name","range"
+	"Tech", "Philosophy", "Player"
+	}
+build_cost=30
+upkeep=1
+sabotage=100
+helptext = "As societies got more organised, a new mode of production was invented: separating the production process into stages and creating specialists for each stage. This enabled craftsmen to use the same tools, resources and workforce to get much output. This kind of organisation was necessary to produce more complex devices such as arquebuses, muskets and many other stuff, used in a wide range of activities, from military to construction and agriculture on large scales.", "Workshops are a prerequisite for building military units using firearms: Arquebusiers, Militia, Musketeers, Dragoons, Cannons. Workshop also adds two production (shields) to every worker specialist in the city."
 
 [building_local_council_I]
 name=_("Local Council I")
