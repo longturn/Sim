@@ -47,7 +47,7 @@ reqs={"type","name","range","present"
 "UnitClass","Sea","Local",FALSE
 "UnitClass","Trireme","Local",FALSE
 "UnitClass","Missile","Local",FALSE
-
+}
 
 [effect_132]
 type="HP_Regen"
@@ -138,4 +138,3 @@ reqs={"type","name","range"
 "Building","Naval Base","City"
 "UnitClass","Trireme","Local"
 }
-
