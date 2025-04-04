@@ -8,9 +8,10 @@
 ; Note that the freeciv AI may not cope well with anything more
 ; than minor changes.
 
-*include "effects/migration.effects"
-*include "effects/tribal.effects"
-
+*include "Sim/effects/calender.effects"
+*include "Sim/effects/migration.effects"
+*include "Sim/effects/tribal.effects"
+*include "Sim/effects/regen.effects"
 
 [datafile]
 description="Sim ruleset effect data for Freeciv21"
@@ -31,123 +32,6 @@ format_version=20
 ;                           See README.effects for help on requirements
 ;
 ; */ <-- avoid gettext warnings
-
-; start at -15,000
-
-[effect_calendar_base]
-type    = "Turn_Years"
-value   = 500
-
-; T20 = 5000 BC
-
-; 500 - 300 = 200 
-[effect_calendar_1]
-type    = "Turn_Years"
-value   = -300
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "-5000", "World"
-    }
-
-; T40 = 1000 BC
-
-; 200 - 150 = 50 
-[effect_calendar_2]
-type    = "Turn_Years"
-value   = -150
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "-1000", "World"
-    }
-
-; T60 = 0 AD
-
-; 50 - 25 = 25 
-[effect_calendar_3]
-type    = "Turn_Years"
-value   = -25
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "0", "World"
-    }
-
-; T100 = 1000 AD
-
-; 25 - 5 = 20 
-[effect_calendar_4]
-type    = "Turn_Years"
-value   = -5
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1000", "World"
-    }
-
-; T120 = 1400 AD
-
-; 20 - 5 = 15 
-[effect_calendar_5]
-type    = "Turn_Years"
-value   = -5
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1400", "World"
-    }
-
-; T140 = 1700 AD
-
-; 15 - 5 = 10 
-[effect_calendar_6]
-type    = "Turn_Years"
-value   = -5
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1700", "World"
-    }
-
-; T155 = 1850 AD
-
-; 10 - 5 = 5 
-[effect_calendar_7]
-type    = "Turn_Years"
-value   = -5
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1850", "World"
-    }
-
-; T165 = 1900 AD
-
-; 5 - 2 = 3 
-[effect_calendar_8]
-type    = "Turn_Years"
-value   = -2
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1900", "World"
-    }
-
-; T175 = 1930 AD
-
-; 3 - 1 = 2 
-[effect_calendar_9]
-type    = "Turn_Years"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1930", "World"
-    }
-
-; T180 = 1940 AD
-
-
-; 2 - 1 = 1 
-[effect_calendar_10]
-type    = "Turn_Years"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1940", "World"
-    }
 
 
 [effect_0]
@@ -263,6 +147,13 @@ reqs={"type","name","range"
 "Gov","Anarchy","Player"
 }
 
+[effect_14a]
+type="City_Unhappy_Size"
+value=2
+reqs={"type","name","range"
+"Gov","Tribal","Player"
+}
+
 [effect_16]
 type="No_Diplomacy"
 value=1
@@ -346,7 +237,7 @@ reqs={"type","name","range","present"
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
-"OutputType","gold","Local",TRUE
+"OutputType","Gold","Local",TRUE
 "Specialist","Taxman","Local",TRUE
 "Building","Bank","City",TRUE
 "Gov","Anarchy","Player",FALSE
@@ -362,24 +253,43 @@ reqs={"type","name","range","present"
 "Gov","Anarchy","Player",FALSE
 }
 
-[effect_27]
-type="HP_Regen"
-value=10
-
-[effect_28]
-type="HP_Regen"
-value=20
-reqs={"type","name","range"
-"CityTile","Center","Local"
+[effect_worker_base]
+type="Specialist_Output"
+value=2
+reqs={"type","name","range","present"
+"Specialist","Worker","Local",TRUE
+"Gov","Anarchy","Player",FALSE
+"OutputType","Shield","Local",TRUE
 }
 
-[effect_Tribe_healing]
-type="HP_Regen"
-value=30
-reqs={"type","name","range"
-"CityTile","Center","Local"
-"UnitType", "Tribe", "Local"
-"CityTile","Center","Local"
+[effect_worker_blacksmith]
+type="Specialist_Output"
+value=1
+reqs={"type","name","range","present"
+"Specialist","Worker","Local",TRUE
+"Gov","Anarchy","Player",FALSE
+"OutputType","Shield","Local",TRUE
+"Building", "Blacksmith's Shop", "City", TRUE
+}
+
+[effect_worker_workshop]
+type="Specialist_Output"
+value=2
+reqs={"type","name","range","present"
+"Specialist","Worker","Local",TRUE
+"Gov","Anarchy","Player",FALSE
+"OutputType","Shield","Local",TRUE
+"Building", "Workshop", "City", TRUE
+}
+
+[effect_worker_factory]
+type="Specialist_Output"
+value=3
+reqs={"type","name","range","present"
+"Specialist","Worker","Local",TRUE
+"Gov","Anarchy","Player",FALSE
+"OutputType","Shield","Local",TRUE
+"Building", "Factory", "City"
 }
 
 
@@ -389,18 +299,6 @@ value=8
 reqs={"type","name","range"
 "Extra","Fortress","Local"
 "Tech","Astronomy","Player"
-}
-
-[effect_30]
-type="HP_Regen"
-value=25
-reqs={"type","name","range","present"
-"Extra","Fortress","Local",TRUE
-"UnitClass","Sea","Local",FALSE
-"UnitClass","Trireme","Local",FALSE
-"UnitClass","Helicopter","Local",FALSE
-"UnitClass","Air","Local",FALSE
-"UnitClass","Missile","Local",FALSE
 }
 
 [effect_fortified]
@@ -418,20 +316,6 @@ reqs={"type","name","range","present"
 "Extra","Fortress","Local",TRUE
 "UnitClass","Helicopter","Local",FALSE
 "UnitClass","Air","Local",FALSE
-"UnitClass","Missile","Local",FALSE
-}
-
-[effect_32]
-type="HP_Regen"
-value=25
-reqs={"type","name","range","present"
-"Extra","Airbase","Local",TRUE
-"UnitClass","Land","Local",FALSE
-"UnitClass","Small Land","Local",FALSE
-"UnitClass","Big Land","Local",FALSE
-"UnitClass","Merchant","Local",FALSE
-"UnitClass","Sea","Local",FALSE
-"UnitClass","Trireme","Local",FALSE
 "UnitClass","Missile","Local",FALSE
 }
 
@@ -1169,22 +1053,6 @@ reqs={"type","name","range","present"
 "UnitFlag","NoVeteran","Local",FALSE
 }
 
-[effect_132]
-type="HP_Regen"
-value=50
-reqs={"type","name","range"
-"Building","Airport","City"
-"UnitClass","Air","Local"
-}
-
-[effect_133]
-type="HP_Regen"
-value=50
-reqs={"type","name","range"
-"Building","Airport","City"
-"UnitClass","Helicopter","Local"
-}
-
 [effect_134]
 type="Airlift"
 value=1
@@ -1265,26 +1133,6 @@ reqs={"type","name","range","present"
 "Gov","Tribal","Player",FALSE
 }
 
-[effect_143]
-type="HP_Regen"
-value=20
-reqs={"type","name","range","present"
-"Building","Barracks","City",TRUE
-"UnitClass","Land","Local",TRUE
-"Building","Barracks II","City",FALSE
-"Building","Barracks III","City",FALSE
-}
-
-[effect_144]
-type="HP_Regen"
-value=20
-reqs={"type","name","range","present"
-"Building","Barracks","City",TRUE
-"UnitClass","Big Land","Local",TRUE
-"Building","Barracks II","City",FALSE
-"Building","Barracks III","City",FALSE
-}
-
 [effect_145]
 type="Veteran_Build"
 value=3
@@ -1311,24 +1159,6 @@ reqs={"type","name","range","present"
 "Gov","Tribal","Player",FALSE
 }
 
-[effect_147]
-type="HP_Regen"
-value=20
-reqs={"type","name","range","present"
-"Building","Barracks II","City",TRUE
-"UnitClass","Land","Local",TRUE
-"Building","Barracks III","City",FALSE
-}
-
-[effect_148]
-type="HP_Regen"
-value=20
-reqs={"type","name","range","present"
-"Building","Barracks II","City",TRUE
-"UnitClass","Big Land","Local",TRUE
-"Building","Barracks III","City",FALSE
-}
-
 [effect_149]
 type="Veteran_Build"
 value=3
@@ -1353,21 +1183,6 @@ reqs={"type","name","range","present"
 "Gov","Tribal","Player",FALSE
 }
 
-[effect_151]
-type="HP_Regen"
-value=20
-reqs={"type","name","range"
-"Building","Barracks III","City"
-"UnitClass","Land","Local"
-}
-
-[effect_152]
-type="HP_Regen"
-value=20
-reqs={"type","name","range"
-"Building","Barracks III","City"
-"UnitClass","Big Land","Local"
-}
 
 [effect_153]
 type="Make_Content"
@@ -1451,7 +1266,7 @@ value=1
 reqs={"type","name","range","present"
 "Building","Colosseum","City",TRUE
 "Specialist","Elvis","Local",TRUE
-"OutputType","luxury","Local",TRUE
+"OutputType","Luxury","Local",TRUE
 "Gov","Anarchy","Player",FALSE
 }
 
@@ -1689,9 +1504,8 @@ value=50
 reqs={"type","name","range","present"
 "Building","Factory","City",TRUE
 "Building","Hydro Plant","City",TRUE
-"OutputType","shield","Local",TRUE
+"OutputType","Shield","Local",TRUE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_189]
@@ -1702,7 +1516,6 @@ reqs={"type","name","range","present"
 "Building","Hydro Plant","City",TRUE
 "OutputType","shield","Local",TRUE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_190]
@@ -1711,7 +1524,6 @@ value=-50
 reqs={"type","name","range","present"
 "Building","Hydro Plant","City",TRUE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_191]
@@ -1721,17 +1533,14 @@ reqs={"type","name","range","present"
 "Building","Recycling Center","City",TRUE
 "Building","Hydro Plant","City",TRUE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_192]
 type="Pollu_Prod_Pct"
 value=-25
 reqs={"type","name","range","present"
-"Building","Hoover Dam","Player",TRUE
 "Building","Hydro Plant","City",TRUE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_193]
@@ -1797,7 +1606,6 @@ reqs={"type","name","range","present"
 "OutputType","shield","Local",TRUE
 "Building","Hydro Plant","City",FALSE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_201]
@@ -1809,7 +1617,6 @@ reqs={"type","name","range","present"
 "OutputType","shield","Local",TRUE
 "Building","Hydro Plant","City",FALSE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_202]
@@ -1819,7 +1626,6 @@ reqs={"type","name","range","present"
 "Building","Nuclear Plant","City",TRUE
 "Building","Hydro Plant","City",FALSE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_203]
@@ -1830,7 +1636,6 @@ reqs={"type","name","range","present"
 "Building","Nuclear Plant","City",TRUE
 "Building","Hydro Plant","City",FALSE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_204]
@@ -1974,13 +1779,6 @@ reqs={"type","name","range","present"
 "UnitFlag","NoVeteran","Local",FALSE
 }
 
-[effect_221]
-type="HP_Regen"
-value=20
-reqs={"type","name","range"
-"Building","Naval Base","City"
-"UnitClass","Sea","Local"
-}
 
 [effect_222]
 type="Veteran_Build"
@@ -1992,13 +1790,6 @@ reqs={"type","name","range","present"
 "UnitFlag","NoVeteran","Local",FALSE
 }
 
-[effect_223]
-type="HP_Regen"
-value=20
-reqs={"type","name","range"
-"Building","Naval Base","City"
-"UnitClass","Trireme","Local"
-}
 
 [effect_224]
 type="Output_Bonus"
@@ -2010,7 +1801,6 @@ reqs={"type","name","range","present"
 "Building","Nuclear Plant","City",FALSE
 "Building","Hydro Plant","City",FALSE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_225]
@@ -2023,7 +1813,6 @@ reqs={"type","name","range","present"
 "Building","Nuclear Plant","City",FALSE
 "Building","Hydro Plant","City",FALSE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_226]
@@ -2034,7 +1823,6 @@ reqs={"type","name","range","present"
 "Building","Nuclear Plant","City",FALSE
 "Building","Hydro Plant","City",FALSE
 "Building","Solar Plant","City",FALSE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_227]
@@ -2090,7 +1878,6 @@ reqs={"type","name","range","present"
 "Building","Factory","City",TRUE
 "Building","Solar Plant","City",TRUE
 "OutputType","shield","Local",TRUE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_234]
@@ -2100,7 +1887,6 @@ reqs={"type","name","range","present"
 "Building","Mfg. Plant","City",TRUE
 "Building","Solar Plant","City",TRUE
 "OutputType","shield","Local",TRUE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_235]
@@ -2108,7 +1894,6 @@ type="Pollu_Prod_Pct"
 value=-75
 reqs={"type","name","range","present"
 "Building","Solar Plant","City",TRUE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_236]
@@ -2117,7 +1902,6 @@ value=-25
 reqs={"type","name","range","present"
 "Building","Recycling Center","City",TRUE
 "Building","Solar Plant","City",TRUE
-"Building","Hoover Dam","City",FALSE
 }
 
 [effect_237]
@@ -2434,7 +2218,6 @@ type="Output_Bonus"
 value=50
 reqs={"type","name","range"
 "Building","Factory","City"
-"Building","Hoover Dam","City"
 "OutputType","shield","Local"
 }
 
@@ -2443,7 +2226,6 @@ type="Output_Bonus"
 value=50
 reqs={"type","name","range"
 "Building","Mfg. Plant","City"
-"Building","Hoover Dam","City"
 "OutputType","shield","Local"
 }
 
@@ -2451,7 +2233,6 @@ reqs={"type","name","range"
 type="Pollu_Prod_Pct"
 value=-75
 reqs={"type","name","range"
-"Building","Hoover Dam","City"
 }
 
 [effect_274]
@@ -2459,7 +2240,6 @@ type="Pollu_Prod_Pct"
 value=-25
 reqs={"type","name","range"
 "Building","Recycling Center","City"
-"Building","Hoover Dam","City"
 }
 
 [effect_275]
@@ -2810,51 +2590,6 @@ reqs={"type","name","range"
 "Tech","Railroad","Player"
 }
 
-[effect_316]
-type="Turn_Years"
-value=50
-
-[effect_317]
-type="Turn_Years"
-value=-25
-reqs={"type","name","range"
-"MinYear","-1000","World"
-}
-
-[effect_318]
-type="Turn_Years"
-value=-5
-reqs={"type","name","range"
-"MinYear","0","World"
-}
-
-[effect_319]
-type="Turn_Years"
-value=-10
-reqs={"type","name","range"
-"MinYear","1000","World"
-}
-
-[effect_320]
-type="Turn_Years"
-value=-5
-reqs={"type","name","range"
-"MinYear","1500","World"
-}
-
-[effect_321]
-type="Turn_Years"
-value=-3
-reqs={"type","name","range"
-"MinYear","1750","World"
-}
-
-[effect_322]
-type="Turn_Years"
-value=-1
-reqs={"type","name","range"
-"MinYear","1900","World"
-}
 
 [effect_323]
 type="Output_Inc_Tile"
