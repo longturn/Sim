@@ -3788,16 +3788,6 @@ reqs={"type","name","range"
 "Building","Shopping Mall","City"
 }
 
-[effect_480]
-type="Output_Add_Tile"
-value=3
-reqs={"type","name","range"
-"Extra","Mine","Local"
-"Extra","Coal","Local"
-"OutputType","shield","Local"
-"Tech","Industrialization","Player"
-}
-
 [effect_481]
 type="Output_Add_Tile"
 value=5
