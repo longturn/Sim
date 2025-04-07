@@ -316,6 +316,20 @@ target_reqs={"type","name","range","present"
 "MaxUnitsOnTile","1","Local",TRUE
 }
 
+[actionenabler_military_liaison]
+action="Bribe Unit"
+actor_reqs={"type","name","range","present"
+"UnitType","Military Liaison","Local",TRUE
+"DiplRel","Alliance","Local",TRUE
+"UnitState","OnLivableTile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"UnitFlag","Unbribable","Local",FALSE
+"CityTile","Center","Local",FALSE
+}
+
 [actionenabler_19]
 action="Sabotage Unit Escape"
 actor_reqs={"type","name","range"
