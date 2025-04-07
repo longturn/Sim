@@ -1968,9 +1968,10 @@ reqs={"type","name","range","present"
 type    = "Output_Per_Tile"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Extra", "Farmland", "Local"
-      "OutputType", "Food", "Local"
+    { "type", "name", "range", "present"
+      "Extra", "Farmland", "Local", TRUE
+      "OutputType", "Food", "Local", TRUE
+      ""CityTile","Center","Local", FALSE
     }
 
 [effect_245]
@@ -2035,10 +2036,11 @@ reqs={"type","name","range"
 [effect_251]
 type="Output_Per_Tile"
 value=51
-reqs={"type","name","range"
-"Tech","Refrigeration","Player"
-"CityTile","Center","Local"
-"OutputType","Food","Local"
+reqs={"type","name","range","present"
+"Tech","Refrigeration","Player", TRUE
+"CityTile","Center","Local", TRUE
+"OutputType","Food","Local", TRUE
+"CityTile","Center","Local", FALSE
 }
 
 [effect_252]
