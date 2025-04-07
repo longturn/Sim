@@ -2638,16 +2638,9 @@ reqs={"type","name","range","present"
 "Terrain","Inaccessible","Local",FALSE
 }
 
-[effect_331]
-type="City_Build_Slots"
-value=1
-reqs={"type","name","range","present"
-"Building","Mfg. Plant","City",FALSE
-}
-
 [effect_332]
 type="City_Build_Slots"
-value=2
+value=1
 reqs={"type","name","range"
 "Building","Mfg. Plant","City"
 }
@@ -3689,13 +3682,6 @@ value=2
 reqs={"type","name","range","present"
 "Building","City Hall","City",TRUE
 "Gov","Anarchy","Player",FALSE
-}
-
-[effect_461]
-type="City_Build_Slots"
-value=1
-reqs={"type","name","range","present"
-"Building","City Hall","City",FALSE
 }
 
 [effect_462]
