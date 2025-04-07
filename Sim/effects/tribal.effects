@@ -52,12 +52,6 @@ reqs={"type","name","range"
 "Gov","Tribal","Player"
 }
 
-[effect_114]
-type="Output_Penalty_Tile"
-value=2
-reqs={"type","name","range"
-"Gov","Tribal","Player"
-}
 
 [effect_no_tribal_trade]
 type="Output_Bonus"
@@ -138,7 +132,7 @@ type	= "Output_Add_Tile"
 value	= 2	
 reqs	=
     { "type", "name", "range", "present"
-      "Age", "1", "City", FALSE
+      "Age", "2", "City", FALSE
       "CityTile","Center","Local",TRUE
       "OutputType","Food","Local", TRUE
       "Gov", "Tribal", "Player", TRUE
