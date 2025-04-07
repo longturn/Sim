@@ -3830,7 +3830,7 @@ reqs={"type","name","range","present"
 
 [effect_485]
 type="Defend_Bonus"
-value=10
+value=100
 reqs={"type","name","range","present"
 "Terrain","Swamp","Local",TRUE
 "UnitFlag","Fast","Local",TRUE
