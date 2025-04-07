@@ -3863,10 +3863,6 @@ reqs={"type","name","range"
 "Building","Office of Hansa","City"
 "OutputType","Trade","Local"
 }
-nreqs = {"type","name","range", "present"
-	"Gov", "Republic", "Player", FALSE
-	"Gov", "Democracy", "Player", FALSE
-}
 
 [effect_489]
 type="Output_Add_Tile"
