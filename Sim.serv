@@ -101,8 +101,12 @@ set autotoggle disabled
 
 #sim
 set civilwarsize 999
+
 set mgr_distance 0
-set mgr_worldchance 20
+set mgr_nationchance 30
+set mgr_worldchance 10
+set mgr_turninterval 3
+
 set demography "NnAwSRLaPEMOCqrb"
 set dispersion 3
 set killstack disabled
