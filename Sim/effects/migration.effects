@@ -1,16 +1,7 @@
 
-
-[effect_457]
-type="Migration_Pct"
-value=800
-reqs={"type","name","range","present"
-"MinSize","1","City",TRUE
-"Age", "3","City",FALSE
-}
-
 [effect_458]
 type="Migration_Pct"
-value=1000
+value=900
 reqs={"type","name","range","present"
 "MinSize","1","City",TRUE
 "Building","Granary","City",TRUE
@@ -19,7 +10,7 @@ reqs={"type","name","range","present"
 
 [effect_migration_granary_2]
 type="Migration_Pct"
-value=500
+value=400
 reqs={"type","name","range","present"
 "MinSize","2","City",TRUE
 "Building","Granary","City",TRUE
@@ -28,7 +19,7 @@ reqs={"type","name","range","present"
 
 [effect_459]
 type="Migration_Pct"
-value=200
+value=400
 reqs={"type","name","range"
 "Building","City Hall","City"
 }
@@ -36,10 +27,29 @@ reqs={"type","name","range"
 
 [effect_467]
 type="Migration_Pct"
-value=1000
+value=900
 reqs={"type","name","range","present"
 "Building","Governor's Office","City",TRUE
-"Building","Granary","City",FALSE
+"MinSize","3","City",TRUE
+"MinSize","4","City",FALSE
+}
+
+[effect_governer_office_size4]
+type="Migration_Pct"
+value=650
+reqs={"type","name","range","present"
+"Building","Governor's Office","City",TRUE
+"MinSize","4","City",TRUE
+"MinSize","5","City",FALSE
+}
+
+[effect_governer_office_size5]
+type="Migration_Pct"
+value=200
+reqs={"type","name","range","present"
+"Building","Governor's Office","City",TRUE
+"MinSize","5","City",TRUE
+"MinSize","6","City",FALSE
 }
 
 
