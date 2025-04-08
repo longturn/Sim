@@ -1317,7 +1317,7 @@ reqs={"type","name","range"
 build_cost=20
 upkeep=6
 sabotage=100
-helptext="This Office helps money from the city reach the Government, reducing corruption by 90%. It is best used in smaller cities that don't have other corruption-reduction buildings, but only if the profit compensates a high cost, sich as a small city with a goldmine. "
+helptext="This Office helps money from the city reach the Government, reducing corruption by 90%. It is best used in smaller cities that don't have other corruption-reduction buildings, but only if the profit compensates a high cost, sich as a small city with a goldmine.", "Governor's Office effect is reduced by half in a city size 5 and stops at size 6 and more because by then the citizens would prefer to govern themselves." 
 
 [building_83]
 name=_("Small Shipyard")
