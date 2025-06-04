@@ -1740,7 +1740,7 @@ reqs={"type","name","range", "present"
 build_cost=40
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_II]
 name=_("Local Council II")
@@ -1756,7 +1756,7 @@ reqs={"type","name","range", "present"
 build_cost=60
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_III]
 name=_("Local Council III")
@@ -1772,7 +1772,7 @@ reqs={"type","name","range", "present"
 build_cost=80
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_IV]
 name=_("Local Council IV")
@@ -1788,7 +1788,7 @@ reqs={"type","name","range", "present"
 build_cost=100
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_V]
 name=_("Local Council V")
@@ -1804,7 +1804,7 @@ reqs={"type","name","range", "present"
 build_cost=110
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_VI]
 name=_("Local Council VI")
@@ -1820,7 +1820,7 @@ reqs={"type","name","range", "present"
 build_cost=120
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_VII]
 name=_("Local Council VII")
@@ -1836,7 +1836,7 @@ reqs={"type","name","range", "present"
 build_cost=130
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_VIII]
 name=_("Local Council VIII")
@@ -1852,7 +1852,7 @@ reqs={"type","name","range", "present"
 build_cost=140
 upkeep=0
 sabotage=100
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_IX]
 name=_("Local Council IX")
@@ -1868,7 +1868,7 @@ reqs={"type","name","range", "present"
 build_cost=60
 upkeep=0
 sabotage=150
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_X]
 name=_("Local Council X")
@@ -1884,7 +1884,7 @@ reqs={"type","name","range", "present"
 build_cost=60
 upkeep=0
 sabotage=160
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_XI]
 name=_("Local Council XI")
@@ -1900,7 +1900,7 @@ reqs={"type","name","range", "present"
 build_cost=60
 upkeep=0
 sabotage=170
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_local_council_XII]
 name=_("Local Council XII")
@@ -1916,7 +1916,7 @@ reqs={"type","name","range", "present"
 build_cost=60
 upkeep=0
 sabotage=180
-helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council.","","The first three Councils can be built under any government. All subsequent ones require the government to be a Republic.","The cost of councils increases."
 
 [building_military_academy]
 name=_("Military Academy")
