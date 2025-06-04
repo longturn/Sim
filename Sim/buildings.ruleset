@@ -1734,10 +1734,10 @@ graphic="b.local_council_i"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
+reqs={"type","name","range", "present"
+"Gov","Tribal","Player", FALSE
 }
-build_cost=60
+build_cost=40
 upkeep=0
 sabotage=100
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
@@ -1749,9 +1749,9 @@ graphic="b.local_council_ii"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council I", "Player"
+reqs={"type","name","range", "present"
+"Gov","Tribal","Player", FALSE
+"Building", "Local Council I", "Player", TRUE
 }
 build_cost=60
 upkeep=0
@@ -1765,11 +1765,11 @@ graphic="b.local_council_iii"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council II", "Player"
+reqs={"type","name","range", "present"
+"Gov","Tribal","Player", FALSE
+"Building", "Local Council II", "Player", TRUE
 }
-build_cost=60
+build_cost=80
 upkeep=0
 sabotage=100
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
@@ -1781,11 +1781,11 @@ graphic="b.local_council_iv"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council III", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council III", "Player", TRUE
 }
-build_cost=60
+build_cost=100
 upkeep=0
 sabotage=100
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
@@ -1797,11 +1797,11 @@ graphic="b.local_council_v"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council IV", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council IV", "Player", TRUE
 }
-build_cost=60
+build_cost=110
 upkeep=0
 sabotage=100
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
@@ -1813,11 +1813,11 @@ graphic="b.local_council_vi"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council V", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council V", "Player", TRUE
 }
-build_cost=60
+build_cost=120
 upkeep=0
 sabotage=100
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
@@ -1825,15 +1825,15 @@ helptext="Governing more distant areas in early republic wasn't a trivial matter
 [building_local_council_VII]
 name=_("Local Council VII")
 genus="SmallWonder"
-graphic="b.local_council_VIi"
+graphic="b.local_council_VII"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council VI", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council VI", "Player", TRUE
 }
-build_cost=60
+build_cost=130
 upkeep=0
 sabotage=100
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
@@ -1845,11 +1845,11 @@ graphic="b.local_council_viii"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council VII", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council VII", "Player", TRUE
 }
-build_cost=60
+build_cost=140
 upkeep=0
 sabotage=100
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
@@ -1861,13 +1861,13 @@ graphic="b.local_council_ix"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council VIII", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council VIII", "Player", TRUE
 }
 build_cost=60
 upkeep=0
-sabotage=100
+sabotage=150
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_X]
@@ -1877,13 +1877,13 @@ graphic="b.local_council_x"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council IX", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council IX", "Player", TRUE
 }
 build_cost=60
 upkeep=0
-sabotage=100
+sabotage=160
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_XI]
@@ -1893,13 +1893,13 @@ graphic="b.local_council_Xi"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council X", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council X", "Player", TRUE
 }
 build_cost=60
 upkeep=0
-sabotage=100
+sabotage=170
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_local_council_XII]
@@ -1909,13 +1909,13 @@ graphic="b.local_council_Xii"
 graphic_alt="b.courthouse"
 sound="b_courthouse"
 sound_alt="b_generic"
-reqs={"type","name","range"
-"Gov","Republic","Player"
-"Building", "Local Council XI", "Player"
+reqs={"type","name","range", "present"
+"Gov","Republic","Player", TRUE
+"Building", "Local Council XI", "Player", TRUE
 }
 build_cost=60
 upkeep=0
-sabotage=100
+sabotage=180
 helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest.", "Works as a government centre, which means that corruption-by-distance is calculated with relation to the closest Local Council."
 
 [building_military_academy]
