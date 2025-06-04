@@ -61,7 +61,7 @@ set airliftingstyle FROM_ALLIES|TO_ALLIES
 set razechance 90
 set happyborders DISABLED
 set occupychance 0
-set startunits "ccccccxxx"
+set startunits "cccccc"
 
 set migration enabled
 set endturn 5000
