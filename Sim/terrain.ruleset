@@ -1549,6 +1549,40 @@ helptext=_("Pollution appears on tiles around cities with high production or pop
  cleaned. If a long time passes with an elevated risk of warming, its effects will be all the\
  more severe when it does occur.")
 
+[extra_depletion]
+name=_("Depleted Land")
+category="Nuisance"
+causes="Appear"
+graphic="tx.pollution"
+activity_gfx="None"
+rmact_gfx="unit.pollution"
+reqs=	{	"type","name","range","present"
+		"CityTile","Center","Adjacent",TRUE
+		"Gov","Tribal","Player",TRUE
+	}
+appearance_chance = 500
+disappearance_chance = 3000
+buildable=FALSE
+build_time=0
+removal_time=0
+
+[extra_depletion_center]
+name=_("Depleted Land")
+category="Nuisance"
+causes="Appear"
+graphic="tx.pollution"
+activity_gfx="None"
+rmact_gfx="unit.pollution"
+reqs=	{	"type","name","range","present"
+		"CityTile","Center","Local",TRUE
+		"Gov","Tribal","Player",TRUE
+	}
+appearance_chance = 2000
+disappearance_chance = 4000
+buildable=FALSE
+build_time=0
+removal_time=0
+
 [extra_26]
 name=_("Minor Tribe Village")
 rule_name="Hut"
