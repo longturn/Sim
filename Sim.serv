@@ -36,7 +36,7 @@ set huts 0
 set landmass 35
 set separatepoles disabled
 set specials 380
-set startpos ALL
+set startpos VARIABLE
 set steepness 30
 set temperature 50
 set topology WRAPX|ISO|HEX
