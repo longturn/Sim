@@ -96,11 +96,14 @@ user_action_1_actor_consuming_always = FALSE
 [actionenabler_resupply]
 action      = "User Action 1"
 actor_reqs =
-    { "type",         "name",   "range", "present"
-      "MinMoveFrags", "9",      "Local", FALSE 
-      ; Changing this will also require modifying `effect_resupply_move_cost` 
-      ; in `supply.effects`
-      "UnitFlag",     "NonMil", "Local", FALSE
+    { "type",         "name",       "range", "present"
+      "DiplRel",      "Armistice",  "Local", FALSE
+      "DiplRel",      "War",        "Local", FALSE
+      "DiplRel",      "Cease-fire", "Local", FALSE
+      "DiplRel",      "Peace",      "Local", FALSE
+      "MinMoveFrags", "1",          "Local", TRUE 
+      ; See `effect_resupply_move_cost` in `supply.effects`
+      "UnitFlag",     "NonMil",     "Local", FALSE
       ; Changing this will require modifying `can_resupply` in script.lua
     }
 target_reqs =

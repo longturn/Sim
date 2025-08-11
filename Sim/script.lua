@@ -40,11 +40,14 @@ function can_resupply(unit)
   return not unit.utype:has_flag("NonMil")
 end
 
+-- How many hitpoints a unit can heal when it uses the Resupply action
+resupply_action_max_heal = 5
+
 -- End of settings --
 
 -- How many hitpoints the unit needs.
 function unit_supplies_needed(unit)
-  return unit.utype.hp - unit:hp()
+  return unit.utype.hp - unit.hp
 end
 
 -- Find the supplier with the fewest supplies remaining on the given tile.
@@ -52,7 +55,7 @@ function best_supplier(tile)
   local best = nil
   for unit in tile:units_iterate() do
     if is_supplier(unit) then
-      if best == nil or best:hp() > unit:hp() then
+      if best == nil or best.hp > unit.hp then
         best = unit
       end
     end
@@ -83,15 +86,10 @@ end
 
 -- Transfer supplies from the supplier to the unit up to the given amount.
 function resupply_by_amount(unit, supplier, amount)
-  local heal = math.min(amount, supplier:hp(), unit_supplies_needed(unit))
+  local heal = math.min(amount, supplier.hp, unit_supplies_needed(unit))
   if heal <= 0 then return end -- No resupply needed
-  unit:recover_hp(heal)
-  supplier:damage_hp(heal, "used")
-end
-
--- Transfer all supplies possible from the supplier to the unit.
-function resupply_unit(unit, supplier)
-  resupply_by_amount(supplier:hp())
+  edit.unit_recover_hp(unit, heal)
+  edit.unit_damage_hp(supplier, heal, "used", unit.owner)
 end
 
 -- Transfer all supplies possible from the supplier to all suppliable units on
@@ -112,7 +110,7 @@ end
 -- Unit action to resupply at the targetted supply unit.
 function resupply_action_handler(action, actor, target)
   if action:rule_name() ~= "User Action 1" then return end -- Resupply
-  resupply_unit(actor, target)
+  resupply_by_amount(actor, target, resupply_action_max_heal)
 end
 signal.connect("action_started_unit_unit", "resupply_action_handler")
 
