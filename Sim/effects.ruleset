@@ -11,7 +11,8 @@
 *include "Sim/effects/calender.effects"
 *include "Sim/effects/migration.effects"
 *include "Sim/effects/tribal.effects"
-*include "Sim/effects/regen.effects"
+; *include "Sim/effects/regen.effects" ; Replaced by resupply units
+*include "Sim/effects/supply.effects"
 
 [datafile]
 description="Sim ruleset effect data for Freeciv21"
@@ -3684,6 +3685,11 @@ reqs={"type","name","range","present"
 "Building","City Hall","City",TRUE
 "Gov","Anarchy","Player",FALSE
 }
+
+; Cities need at least one build slot
+[effect_base_city_build_slot]
+type="City_Build_Slots"
+value=1
 
 [effect_462]
 type="City_Build_Slots"

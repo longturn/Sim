@@ -1,0 +1,173 @@
+[effect_resupply_move_cost]
+type="Action_Success_Actor_Move_Cost"
+value=9 ; 9 frags = 1MP - Changing this will also require modifying 
+        ;                 `actionenabler_resupply` in `game.ruleset`
+reqs={
+    "type",   "name",          "range"
+    "Action", "User Action 1", "Local" ; Resupply action
+}
+
+; This helps prevent supply units getting picked as defenders
+[effect_supply_weak_defence]
+type="Fortify_Defense_Bonus"
+value=-99
+reqs={
+    "type",     "name",     "range"
+    "UnitFlag", "Supplier", "Local"
+}
+
+; AI still does normal regen because they're too stupid to resupply
+[effect_27]
+type="HP_Regen"
+value=10
+reqs={"type","name","range", "present"
+"AI","Hard","Player"
+"CityTile","Center","Local"
+}
+
+[effect_28]
+type="HP_Regen"
+value=10
+reqs={"type","name","range"
+"AI","Hard","Player"
+"CityTile","Center","Local"
+}
+
+[effect_Tribe_healing]
+type="HP_Regen"
+value=40
+reqs={"type","name","range"
+"AI","Hard","Player"
+"CityTile","Center","Local"
+"UnitType", "Tribe", "Local"
+"CityTile","Center","Local"
+}
+
+
+[effect_30]
+type="HP_Regen"
+value=10
+reqs={"type","name","range","present"
+"AI","Hard","Player"
+"Extra","Fortress","Local",TRUE
+"UnitClass","Sea","Local",FALSE
+"UnitClass","Trireme","Local",FALSE
+"UnitClass","Helicopter","Local",FALSE
+"UnitClass","Air","Local",FALSE
+"UnitClass","Missile","Local",FALSE
+}
+
+[effect_32]
+type="HP_Regen"
+value=25
+reqs={"type","name","range","present"
+"AI","Hard","Player"
+"Extra","Airbase","Local",TRUE
+"UnitClass","Land","Local",FALSE
+"UnitClass","Small Land","Local",FALSE
+"UnitClass","Big Land","Local",FALSE
+"UnitClass","Merchant","Local",FALSE
+"UnitClass","Sea","Local",FALSE
+"UnitClass","Trireme","Local",FALSE
+"UnitClass","Missile","Local",FALSE
+}
+
+[effect_132]
+type="HP_Regen"
+value=30
+reqs={"type","name","range"
+"AI","Hard","Player"
+"Building","Airport","City"
+"UnitClass","Air","Local"
+}
+
+
+[effect_133]
+type="HP_Regen"
+value=40
+reqs={"type","name","range"
+"AI","Hard","Player"
+"Building","Airport","City"
+"UnitClass","Helicopter","Local"
+}
+
+
+[effect_143]
+type="HP_Regen"
+value=20
+reqs={"type","name","range","present"
+"AI","Hard","Player"
+"Building","Barracks","City",TRUE
+"UnitClass","Land","Local",TRUE
+"Building","Barracks II","City",FALSE
+"Building","Barracks III","City",FALSE
+}
+
+[effect_144]
+type="HP_Regen"
+value=20
+reqs={"type","name","range","present"
+"AI","Hard","Player"
+"Building","Barracks","City",TRUE
+"UnitClass","Big Land","Local",TRUE
+"Building","Barracks II","City",FALSE
+"Building","Barracks III","City",FALSE
+}
+
+[effect_147]
+type="HP_Regen"
+value=20
+reqs={"type","name","range","present"
+"AI","Hard","Player"
+"Building","Barracks II","City",TRUE
+"UnitClass","Land","Local",TRUE
+"Building","Barracks III","City",FALSE
+}
+
+[effect_148]
+type="HP_Regen"
+value=20
+reqs={"type","name","range","present"
+"AI","Hard","Player"
+"Building","Barracks II","City",TRUE
+"UnitClass","Big Land","Local",TRUE
+"Building","Barracks III","City",FALSE
+}
+
+
+[effect_151]
+type="HP_Regen"
+value=20
+reqs={"type","name","range"
+"AI","Hard","Player"
+"Building","Barracks III","City"
+"UnitClass","Land","Local"
+}
+
+[effect_152]
+type="HP_Regen"
+value=20
+reqs={"type","name","range"
+"AI","Hard","Player"
+"Building","Barracks III","City"
+"UnitClass","Big Land","Local"
+}
+
+
+[effect_221]
+type="HP_Regen"
+value=20
+reqs={"type","name","range"
+"AI","Hard","Player"
+"Building","Naval Base","City"
+"UnitClass","Sea","Local"
+}
+
+[effect_223]
+type="HP_Regen"
+value=20
+reqs={"type","name","range"
+"AI","Hard","Player"
+"Building","Naval Base","City"
+"UnitClass","Trireme","Local"
+}

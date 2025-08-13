@@ -70,6 +70,13 @@ airlift_max_range="unlimited"
 ui_name_suicide_attack="%sExplode Missile%s"
 ui_name_conquer_city_2="%sConquer City from non native%s"
 ui_name_transport_disembark_2="%sDisembark from non native%s"
+
+ui_name_user_action_1                = _("%sResupply%s")
+user_action_1_target_kind            = "individual units"
+user_action_1_min_range              = 0
+user_action_1_max_range              = 0
+user_action_1_actor_consuming_always = FALSE
+
 ; /* <-- avoid gettext warnings
 ;
 ; Action enablers:
@@ -86,6 +93,24 @@ ui_name_transport_disembark_2="%sDisembark from non native%s"
 ;
 ; */ <-- avoid gettext warnings
 
+[actionenabler_resupply]
+action      = "User Action 1"
+actor_reqs =
+    { "type",         "name",       "range", "present"
+      "DiplRel",      "Armistice",  "Local", FALSE
+      "DiplRel",      "War",        "Local", FALSE
+      "DiplRel",      "Cease-fire", "Local", FALSE
+      "DiplRel",      "Peace",      "Local", FALSE
+      "MinMoveFrags", "1",          "Local", TRUE 
+      ; See `effect_resupply_move_cost` in `supply.effects`
+      "UnitFlag",     "NonMil",     "Local", FALSE
+      ; Changing this will require modifying `can_resupply` in script.lua
+    }
+target_reqs =
+    { "type",     "name",     "range", "present"
+      "UnitFlag", "Supplier", "Local", TRUE
+      ; Changing this will require modifying `is_supplier` in script.lua
+    }
 
 [actionenabler_0]
 action="Establish Embassy"
