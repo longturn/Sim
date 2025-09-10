@@ -35,13 +35,17 @@ function is_supplier(unit)
   return unit.utype:has_flag("Supplier")
 end
 
+function is_mergeable(unit)
+  return unit.utype:has_flag("Mergeable")
+end
+
 -- When modifying this, also see `actionenabler_resupply` in `game.ruleset`.
 function can_resupply(unit)
   return not unit.utype:has_flag("NonMil")
 end
 
 -- How many hitpoints a unit can heal when it uses the Resupply action
-resupply_action_max_heal = 5
+resupply_action_max_heal = 30
 
 -- End of settings --
 
@@ -54,7 +58,7 @@ end
 function best_supplier(tile)
   local best = nil
   for unit in tile:units_iterate() do
-    if is_supplier(unit) then
+    if is_supplier(unit) and not is_mergeable(unit) then
       if best == nil or best.hp > unit.hp then
         best = unit
       end
