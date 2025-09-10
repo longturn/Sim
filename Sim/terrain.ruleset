@@ -1553,14 +1553,17 @@ helptext=_("Pollution appears on tiles around cities with high production or pop
 name=_("Depleted Land")
 category="Nuisance"
 causes="Appear"
-graphic="tx.pollution"
+rmcauses="Disappear"
+graphic="tx.depletion"
+graphic_alt="tx.pollution"
 activity_gfx="None"
 rmact_gfx="unit.pollution"
-reqs=	{	"type","name","range","present"
-		"CityTile","Center","Adjacent",TRUE
-		"Gov","Tribal","Player",TRUE
-	}
+appearance_reqs={	"type","name","range","present"
+			"Gov","Tribal","Player",TRUE
+		}
 appearance_chance = 500
+;disappearance_reqs=	{	"type","name","range","present"
+;			}
 disappearance_chance = 3000
 buildable=FALSE
 build_time=0
@@ -1570,14 +1573,18 @@ removal_time=0
 name=_("Depleted Land")
 category="Nuisance"
 causes="Appear"
-graphic="tx.pollution"
+rmcauses="Disappear"
+graphic="tx.depletion"
+graphic_alt="tx.pollution"
 activity_gfx="None"
 rmact_gfx="unit.pollution"
-reqs=	{	"type","name","range","present"
-		"CityTile","Center","Local",TRUE
-		"Gov","Tribal","Player",TRUE
-	}
+appearance_reqs=	{	"type","name","range","present"
+				"CityTile","Center","Local",TRUE
+				"Gov","Tribal","Player",TRUE
+			}
 appearance_chance = 2000
+;disappearance_reqs=	{	"type","name","range","present"
+;			}
 disappearance_chance = 4000
 buildable=FALSE
 build_time=0
