@@ -104,11 +104,35 @@ actor_reqs =
       "MinMoveFrags", "1",          "Local", TRUE 
       ; See `effect_resupply_move_cost` in `supply.effects`
       "UnitFlag",     "NonMil",     "Local", FALSE
+      "UnitClass",    "Air",        "Local", FALSE
       ; Changing this will require modifying `can_resupply` in script.lua
     }
 target_reqs =
     { "type",     "name",     "range", "present"
       "UnitFlag", "Supplier", "Local", TRUE
+      "UnitState", "Transported", "Local", FALSE
+      ; Changing this will require modifying `is_supplier` in script.lua
+    }
+
+
+[actionenabler_resupply_tribal]
+action      = "User Action 1"
+actor_reqs =
+    { "type",         "name",       "range", "present"
+      "DiplRel",      "Armistice",  "Local", FALSE
+      "DiplRel",      "War",        "Local", FALSE
+      "DiplRel",      "Cease-fire", "Local", FALSE
+      "DiplRel",      "Peace",      "Local", FALSE
+      "MinMoveFrags", "1",          "Local", TRUE 
+      ; See `effect_resupply_move_cost` in `supply.effects`
+      "UnitFlag",     "NonMil",     "Local", FALSE
+      "UnitClass",    "Air",        "Local", FALSE
+      ; Changing this will require modifying `can_resupply` in script.lua
+    }
+target_reqs =
+    { "type",     "name",     "range", "present"
+      "UnitFlag", "Mergeable", "Local", TRUE
+      "UnitState", "Transported", "Local", FALSE
       ; Changing this will require modifying `is_supplier` in script.lua
     }
 
@@ -622,6 +646,7 @@ actor_reqs={"type","name","range","present"
 "UnitFlag","Bombarder","Local",FALSE
 "DiplRel","War","Local",TRUE
 }
+
 
 [actionenabler_44]
 action="Attack"
