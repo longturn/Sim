@@ -721,6 +721,7 @@ name=_("Animal Husbandry")
 req1="None"
 req2="None"
 graphic="-"
+cost=50
 
 [advance_98]
 name=_("Spirituality")
