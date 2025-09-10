@@ -1,0 +1,438 @@
+
+[effect_combat_rounds_QuickAttack]
+type   = "Combat_Rounds"
+value  =  4
+reqs   =
+    { "type", "name", "range"
+    "UnitFlag", "QuickAttack", "Local"
+    }
+
+[effect_type_action-success_actor_move_cost_raiders]
+type    = "Action_Success_Actor_Move_Cost"
+value 	= -6
+reqs	=
+    { "type", "name", "range"
+    "UnitFlag", "QuickAttack", "Local"
+    "Action",   "Attack",    "Local"
+    }
+
+[effect_combat_rounds]
+type   = "Combat_Rounds"
+value  =  12
+reqs   =
+    { 	"type", "name", "range","present"
+    	"UnitFlag", "QuickAttack", "Local",FALSE
+    }
+
+;;;;;;;;;;;;;;;;;;;;;;;    DAMAGED   ;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp60 12cr  ; ; ; ; ; ; ; ; ; ; ; ;
+
+
+[effect_combat_rounds_hp60_12cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "45", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp60_12cr_damage50pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "30", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp60_12cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "15", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp60 4cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp60_4cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "45", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp60_4cr_damage30pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "30", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp60_4cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "15", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp100 12cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp100_12cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp100", "Local", TRUE
+	"MinHitPoints", "75", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp100_12cr_damage7p0ct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp100", "Local", TRUE
+	"MinHitPoints", "50", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp100_12cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp100", "Local", TRUE
+	"MinHitPoints", "25", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp100 4cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp100_4cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "75", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+
+[effect_combat_rounds_hp100_4cr_damage50pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "50", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+
+[effect_combat_rounds_hp100_4cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp60", "Local", TRUE
+	"MinHitPoints", "25", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp120 12cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp120_12cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp120", "Local", TRUE
+	"MinHitPoints", "90", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp120_12cr_damage70pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp120", "Local", TRUE
+	"MinHitPoints", "60", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp120_12cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp120", "Local", TRUE
+	"MinHitPoints", "30", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp120 4cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp120_4cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp120", "Local", TRUE
+	"MinHitPoints", "90", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp120_4cr_damage50pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp120", "Local", TRUE
+	"MinHitPoints", "60", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp120_4cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp120", "Local", TRUE
+	"MinHitPoints", "30", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp150 12cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp150_12cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp150", "Local", TRUE
+	"MinHitPoints", "112", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp150_12cr_damage50pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp150", "Local", TRUE
+	"MinHitPoints", "75", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp150_12cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp150", "Local", TRUE
+	"MinHitPoints", "37", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp150 4cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp150_4cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp150", "Local", TRUE
+	"MinHitPoints", "112", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp150_4cr_damage50pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp150", "Local", TRUE
+	"MinHitPoints", "75", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp150_4cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp150", "Local", TRUE
+	"MinHitPoints", "37", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp250 12cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp250_12cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp250", "Local", TRUE
+	"MinHitPoints", "187", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp250_12cr_damage50pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp250", "Local", TRUE
+	"MinHitPoints", "125", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+[effect_combat_rounds_hp250_12cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp250", "Local", TRUE
+	"MinHitPoints", "67", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", FALSE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   hp250 4cr  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_hp250_4cr_damage75pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp250", "Local", TRUE
+	"MinHitPoints", "187", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp250_4cr_damage50pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp250", "Local", TRUE
+	"MinHitPoints", "125", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+[effect_combat_rounds_hp250_4cr_damage25pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitFlag", "hp250", "Local", TRUE
+	"MinHitPoints", "67", "Local", FALSE
+	"UnitFlag", "QuickAttack", "Local", TRUE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   Raiders  ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_Raiders_damage75pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Raiders", "Local", TRUE
+	"MinHitPoints", "23", "Local", FALSE
+    }
+
+[effect_combat_rounds_Raiders_damage50pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Raiders", "Local", TRUE
+	"MinHitPoints", "15", "Local", FALSE
+    }
+
+[effect_combat_rounds_Raiders_damage25pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Raiders", "Local", TRUE
+	"MinHitPoints", "7", "Local", FALSE
+    }
+
+
+; ; ; ; ; ; ; ; ; ; ; ;   Fanatics   ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_Fanatics_damage75pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Fanatics", "Local", TRUE
+	"MinHitPoints", "15", "Local", FALSE
+    }
+
+[effect_combat_rounds_Fanatics_damage50pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Fanatics", "Local", TRUE
+	"MinHitPoints", "10", "Local", FALSE
+    }
+
+[effect_combat_rounds_Fanatics_damage25pct]
+type	= "Combat_Rounds"
+value	= -3
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Fanatics", "Local", TRUE
+	"MinHitPoints", "5", "Local", FALSE
+    }
+
+; ; ; ; ; ; ; ; ; ; ; ;   Stealth Fighter   ; ; ; ; ; ; ; ; ; ; ; ; 
+
+[effect_combat_rounds_StlthFighter_damage75pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Stealth Fighter", "Local", TRUE
+	"MinHitPoints", "150", "Local", FALSE
+    }
+
+[effect_combat_rounds_StlthFighter_damage50pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Stealth Fighter", "Local", TRUE
+	"MinHitPoints", "100", "Local", FALSE
+    }
+
+[effect_combat_rounds_StlthFighter_damage25pct]
+type	= "Combat_Rounds"
+value	= -1
+reqs	=
+    { 	"type", "name", "range","present"
+	"UnitType", "Stealth Fighter", "Local", TRUE
+	"MinHitPoints", "50", "Local", FALSE
+    }

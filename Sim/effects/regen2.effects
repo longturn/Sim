@@ -1,0 +1,44 @@
+
+[effect_regen_raiders]
+type="HP_Regen"
+value=10
+reqs={"type","name","range"
+"UnitType","Raiders","Local"
+"Gov", "Tribal","Player"
+}
+
+[effect_regen_bowmen]
+type="HP_Regen"
+value=10
+reqs={"type","name","range"
+"UnitType","Bowmen","Local"
+"Gov", "Tribal","Player"
+}
+
+[effect_regen_warriors]
+type="HP_Regen"
+value=5
+reqs={"type","name","range", "present"
+"UnitType","Warriors","Local", TRUE
+"Gov", "Monarchy","Player", FALSE
+"Gov", "Republic","Player", FALSE
+"Gov", "Fundamentalism","Player", FALSE
+"Gov", "Communism","Player", FALSE
+"Gov", "Democracy","Player", FALSE
+"Gov", "Fundamentalism","Player", FALSE
+}
+
+[effect_regen_partisan]
+type="Unit_Recover"
+value=10
+reqs={"type","name","range"
+"UnitType","Partisan","Local"
+}
+
+[effect_partisan_defence-city]
+type="Defend_Bonus"
+value=-30
+reqs={"type","name","range"
+"CityTile","Center","Local"
+"UnitType","Partisan","Local"
+}
