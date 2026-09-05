@@ -12,19 +12,19 @@ rulesetdir Sim
 # ----------------------------------------------------
 
 # server test game settings --------------------------
-# set timeout 120 # 2 mins
-# set unitwaittime 10  # 10 sec
-# set revealmap "START"
-# set startcity ENABLED
-# cmdlevel info
+set timeout 120 # 2 mins
+set unitwaittime 10  # 10 sec
+set revealmap "START"
+set startcity ENABLED
+cmdlevel info
 # ----------------------------------------------------
 
 # real game settings --------------------------------
-set fogofwar "ENABLED"
-set first_timeout 259200 # 3 days
-set timeout 90000 # 25 hours
-set unitwaittime 36000  # 10 hours
-cmdlevel info
+# set fogofwar "ENABLED"
+# set first_timeout 259200 # 3 days
+# set timeout 90000 # 25 hours
+# set unitwaittime 36000  # 10 hours
+# cmdlevel info
 # ----------------------------------------------------
 
 

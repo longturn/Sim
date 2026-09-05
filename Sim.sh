@@ -1,8 +1,8 @@
 #!/bin/sh
 
-GAMEID=Sim
+GAMEID=Sim07
 GAMENAME=Sim
-GAMEDIR=$HOME/server/Sim
-PORT=5059
+GAMEDIR=$HOME/server/Sim07
+PORT=5057
 
 . ../rc.subr.fc21
