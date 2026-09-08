@@ -4143,8 +4143,8 @@ value =1
 type  = "Bombard_Limit_Pct"
 value = 19
 reqs   =
-    { "type", "name", "range"
-    "Terrain", "Mountains", "Local"
+    { "type", "name", "range","present"
+    "Terrain", "Mountains", "Local",TRUE
     "CityTile","Center","Local", FALSE
     }
 
@@ -4152,8 +4152,8 @@ reqs   =
 type  = "Bombard_Limit_Pct"
 value = 29
 reqs   =
-    { "type", "name", "range"
-    "Terrain", "Forest", "Local"
+    { "type", "name", "range","present"
+    "Terrain", "Forest", "Local",TRUE
     "CityTile","Center","Local", FALSE
     }
 
@@ -4161,8 +4161,8 @@ reqs   =
 type  = "Bombard_Limit_Pct"
 value = 39
 reqs   =
-    { "type", "name", "range"
-    "Terrain", "Jungle", "Local"
+    { "type", "name", "range","present"
+    "Terrain", "Jungle", "Local",TRUE
     "CityTile","Center","Local", FALSE
     }
 
